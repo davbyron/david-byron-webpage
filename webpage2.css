@@ -1,0 +1,168 @@
+#about {
+  height: 160vh;
+}
+
+#copyright {
+  height: 5vh;
+  /* border: 1px solid purple; */
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  font-weight: 100;
+  text-align: center;
+}
+
+#description {
+  position: absolute;
+  top: 25vh;
+  left: 50vw;
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-weight: 100;
+}
+
+#ex1 {
+  top: 50vh;
+  left: 23vw;
+}
+
+#ex1 .square {
+  background-image: url("./media/hmm.png");
+  background-size: contain;
+}
+
+#ex2 {
+  top: 50vh;
+  left: 28vw;
+}
+
+#ex2 .square {
+  background-image: url("./media/xam.png");
+  background-size: 120%;
+}
+
+#ex3 {
+  top: 50vh;
+  left: 33vw;
+}
+
+#ex3 .square {
+  background-image: url("./media/slf.png");
+  background-size: 140%;
+}
+
+#picture {
+  height: 50vh;
+  min-height: 20vh;
+  width: 50vh;
+  min-width: 20vh;
+  position: relative;
+  top: 25vh;
+  left: 15vw;
+  background-image: url("./media/headshot.jpg");
+  background-size: contain;
+  border-radius: 100%;
+  z-index: 2;
+}
+
+#portfolio {
+  height: 135vh;
+}
+
+.banner {
+  position: sticky;
+  height: 30vh;
+  top: 0;
+  /* border: 1px solid blue; */
+  background-color: white;
+  z-index: 1;
+}
+
+.banner p {
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-weight: 100;
+  position: relative;
+  top: 12vh;
+  left: 23vw;
+  width: max-content;
+  /* border: 1px solid green; */
+}
+
+.button {
+  cursor: pointer;
+}
+
+.container {
+  height: 97vh;
+  /* border: 1px solid green; */
+}
+
+.details {
+  position: relative;
+  top: 2vh;
+  height: auto;
+  width: 20vw;
+  /* border: 1px solid orange; */
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 100;
+  text-align: justify;
+  overflow: scroll;
+}
+
+.emboldened {
+  font-weight: 300;
+}
+
+.ex {
+  height: 30vh;
+  display: inline-block;
+  position: relative;
+  /* border: 1px solid pink; */
+  vertical-align: top;
+}
+
+.fa-linkedin-in, .fa-github, .fa-envelope {
+  font-size: 33px;
+  padding: 0 5px;
+  color: black;
+  text-decoration: none;
+}
+
+.icons {
+  position: relative;
+  top: 1vh;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.info {
+  visibility: hidden;
+  /* border: 1px solid red; */
+}
+
+.link {
+  color: blue;
+  text-decoration: none;
+}
+
+.particulars {
+  position: relative;
+  top: 15vh;
+  height: 50vh;
+  width: 50vw;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  text-align: justify;
+}
+
+.square {
+  position: relative;
+  height: 20vh;
+  width: 20vw;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  border-radius: 5%;
+  cursor: pointer;
+}
