@@ -8,23 +8,41 @@ const sq2 = document.getElementById('sq2');
 const sq3 = document.getElementById('sq3');
 const about = document.getElementById('about');
 const copyright = document.getElementById('copyright');
+const body = document.querySelector('body');
 
 let clientHeight = document.documentElement.clientHeight;
 let clientWidth = document.documentElement.clientWidth;
 let totalScrollHeight = document.documentElement.scrollHeight;
 
-const portfolioTop = portfolio.offsetTop;
-const aboutTop = about.offsetTop;
+const getOffset = (element, side) => {
+  switch(side) {
+    case 'top':
+      let offsetTop = 0;
+      while(element) {
+        offsetTop += element.offsetTop;
+        element = element.offsetParent;
+      }
+      return offsetTop;
+      break;
+    case 'left':
+      let offsetLeft = 0;
+      while(element) {
+        offsetLeft += element.offsetLeft;
+        element = element.offsetParent;
+      }
+      return offsetLeft;
+      break;
+  }
+}
 
-const originalFaceTop = face.offsetTop;
-const originalFaceLeft = face.offsetLeft;
-const originalFaceHeight = face.offsetHeight;
-const originalFaceWidth = face.offsetWidth;
+const descriptionTop = getOffset(description, 'top');
+const portfolioTop = getOffset(portfolio, 'top');
+const aboutTop = getOffset(about, 'top');
 
-let faceTop = originalFaceTop;
-let faceHeight = originalFaceHeight;
-let faceWidth = originalFaceWidth;
-let faceLeft = originalFaceLeft;
+let faceTop = getOffset(face, 'top');
+let faceLeft = getOffset(face, 'left');
+let faceHeight = face.offsetHeight;
+let faceWidth = face.offsetWidth;
 
 let lastScrollTop = 0;
 let scrolledPast = false;
@@ -43,28 +61,28 @@ const scrollingDirection = (amountScrolled) => {
   return amountScrolled > lastScrollTop ? 'down' : 'up';
 }
 
-const actionDistance = originalFaceTop - vhToPx(2);
+const actionDistance = descriptionTop - vhToPx(2);
 const handleScroll = () => {
   let amountScrolled = document.documentElement.scrollTop;
   let heightPercentage = amountScrolled / actionDistance;
 
   if (amountScrolled < actionDistance) {
     if (scrollingDirection(amountScrolled) == 'down') {
-      face.style.height = String(faceHeight - (0.5 * originalFaceHeight * heightPercentage)) + 'px';
-      face.style.width = String(faceWidth - (0.5 * originalFaceWidth * heightPercentage)) + 'px';
-      face.style.left = String(originalFaceLeft - ((8/15) * originalFaceLeft * heightPercentage)) + 'px';
+      face.style.height = String(faceHeight - (0.5 * faceHeight * heightPercentage)) + 'px';
+      face.style.width = String(faceWidth - (0.5 * faceWidth * heightPercentage)) + 'px';
+      face.style.left = String(faceLeft - ((8/15) * faceLeft * heightPercentage)) + 'px';
       if (scrolledPast) {
-        face.style.top = String(originalFaceTop - ((23/25) * originalFaceTop * heightPercentage)) + 'px';
+        face.style.top = String(faceTop - ((23/25) * faceTop * heightPercentage)) + 'px';
       }
 
     } else {
-      face.style.height = String(faceHeight - (0.5 * originalFaceHeight * heightPercentage)) + 'px';
-      face.style.width = String(faceWidth - (0.5 * originalFaceWidth * heightPercentage)) + 'px';
-      face.style.left = String(originalFaceLeft - ((8/15) * originalFaceLeft * heightPercentage)) + 'px';
+      face.style.height = String(faceHeight - (0.5 * faceHeight * heightPercentage)) + 'px';
+      face.style.width = String(faceWidth - (0.5 * faceWidth * heightPercentage)) + 'px';
+      face.style.left = String(faceLeft - ((8/15) * faceLeft * heightPercentage)) + 'px';
       if (scrolledPast) {
         face.style.top = String(vhToPx(2) + (actionDistance - ((23/25) * actionDistance * heightPercentage))) + 'px';
-        description.style.visibility = 'visible';
-        portfolio.style.visibility = 'hidden';
+        // description.style.visibility = 'visible';
+        // portfolio.style.visibility = 'hidden';
       }
     }
   } else {
@@ -73,33 +91,17 @@ const handleScroll = () => {
     face.style.left = '7vw';
     scrolledPast = true;
 
-    if (amountScrolled > (aboutTop - portfolioTop)) {
-      portfolio.style.visibility = 'hidden';
-      about.style.visibility = 'visible';
-    } else {
-      portfolio.style.visibility = 'visible';
-      about.style.visibility = 'hidden';
-      description.style.visibility = 'hidden';
-    }
+    // if (amountScrolled > (aboutTop - portfolioTop)) {
+    //   portfolio.style.visibility = 'hidden';
+    //   about.style.visibility = 'visible';
+    // } else {
+    //   portfolio.style.visibility = 'visible';
+    //   about.style.visibility = 'hidden';
+    //   description.style.visibility = 'hidden';
+    // }
   }
 
   lastScrollTop = amountScrolled;
-
-
-  //description.style.position = 'sticky';
-
-  //description.innerHTML = `You're scrolled at: ${amountScrolled}`;
-                      // <br> The action distance is: ${actionDistance}
-                      // <br> Percentage scrolled: ${heightPercentage}
-                      // <br> The face height is: ${face.style.height}
-                      // <br> The face width is: ${face.style.width}
-                      // <br> The top is: ${face.style.top}
-                      // <br> The left is: ${face.style.left}
-                      // <br> Offset left: ${faceLeft}
-                      // <br> Offset height: ${faceHeight}
-                      // <br> Offset width: ${faceWidth}
-                      // <br> Offset top: ${faceTop}
-                      //`;
 }
 
 const handleClick = e => {
@@ -114,14 +116,14 @@ if (document.documentElement.scrollTop > actionDistance) {
   face.style.width = '25vh';
   scrolledPast = true;
 
-  if (document.documentElement.scrollTop > (aboutTop - portfolioTop)) {
-    portfolio.style.visibility = 'hidden';
-    about.style.visibility = 'visible';
-  } else {
-    portfolio.style.visibility = 'visible';
-    about.style.visibility = 'hidden';
-    description.style.visibility = 'hidden';
-  }
+  // if (document.documentElement.scrollTop > (portfolioTop + portfolio.scrollHeight)) {
+  //   portfolio.style.visibility = 'hidden';
+  //   about.style.visibility = 'visible';
+  // } else {
+  //   portfolio.style.visibility = 'visible';
+  //   about.style.visibility = 'hidden';
+  //   description.style.visibility = 'hidden';
+  // }
 }
 
 document.onscroll = handleScroll;
@@ -130,9 +132,9 @@ port_button.onclick = () => { document.documentElement.scroll({
   left: 0,
   behavior: 'smooth' }) };
 about_button.onclick = () => { document.documentElement.scroll({
-  top: aboutTop - vhToPx(7),
+  top: aboutTop,
   left: 0,
   behavior: 'smooth' }) };
 sq1.onclick = () => { window.open('https://github.com/davbyron/HMM') };
 sq2.onclick = () => { window.open('https://sites.google.com/site/thekhoisanlanguages/tuu/xam') };
-sq3.onclick = () => { window.open('../media/thesis.pdf') };
+sq3.onclick = () => { window.open('./media/thesis.pdf') };
