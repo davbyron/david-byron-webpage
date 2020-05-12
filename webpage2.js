@@ -40,6 +40,7 @@ let faceWidth = face.offsetWidth;
 
 let lastScrollTop = 0;
 let scrolledPast = false;
+// const breakpoint = window.matchMedia("(max-width: 1125px)");
 
 const vhToPx = amount => {
   let pixelHeight = (amount * 0.01) * (totalScrollHeight - clientHeight);
@@ -75,8 +76,6 @@ const handleScroll = () => {
       face.style.left = String(faceLeft - ((8/15) * faceLeft * heightPercentage)) + 'px';
       if (scrolledPast) {
         face.style.top = String(vhToPx(2) + (actionDistance - ((23/25) * actionDistance * heightPercentage))) + 'px';
-        // description.style.visibility = 'visible';
-        // portfolio.style.visibility = 'hidden';
       }
     }
   } else {
@@ -84,15 +83,6 @@ const handleScroll = () => {
     face.style.top = '2vh';
     face.style.left = '7vw';
     scrolledPast = true;
-
-    // if (amountScrolled > (aboutTop - portfolioTop)) {
-    //   portfolio.style.visibility = 'hidden';
-    //   about.style.visibility = 'visible';
-    // } else {
-    //   portfolio.style.visibility = 'visible';
-    //   about.style.visibility = 'hidden';
-    //   description.style.visibility = 'hidden';
-    // }
   }
 
   lastScrollTop = amountScrolled;
@@ -109,16 +99,15 @@ if (document.documentElement.scrollTop > actionDistance) {
   face.style.height = '25vh';
   face.style.width = '25vh';
   scrolledPast = true;
-
-  // if (document.documentElement.scrollTop > (portfolioTop + portfolio.scrollHeight)) {
-  //   portfolio.style.visibility = 'hidden';
-  //   about.style.visibility = 'visible';
-  // } else {
-  //   portfolio.style.visibility = 'visible';
-  //   about.style.visibility = 'hidden';
-  //   description.style.visibility = 'hidden';
-  // }
 }
+
+// breakpoint.addListener(() => {
+//   if (breakpoint.matches) {
+//     face.style.left = '1vw';
+//   } else {
+//     face.style.left = '7vw';
+//   }
+// });
 
 document.onscroll = handleScroll;
 

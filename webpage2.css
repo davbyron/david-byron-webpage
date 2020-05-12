@@ -150,10 +150,61 @@ nav {
   cursor: pointer;
 }
 
-.top {
-  border: 1px solid red;
+@media only screen and (max-width: 1125px) {
+  #picture {
+    left: 10vw !important;
+  }
 }
 
-.words {
-  border: 1px solid blue;
+@media only screen and (max-width: 952px) {
+  body {
+    display: block;
+  }
+
+  nav {
+    height: auto;
+    width: 100%;
+    left: 0;
+  }
+
+  nav .list {
+    visibility: hidden;
+  }
+
+  #copyright {
+    margin-top: 30vh;
+  }
+
+  #description {
+    position: static;
+    top: 22vh;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #picture {
+    position: static !important;
+    height: 40vh !important;
+    width: 40vh !important;
+    top: 2vh !important;
+    left: 0 !important;
+    margin: 0 auto;
+  }
+
+  .container {
+    display: block;
+    margin-top: 0;
+  }
+
+  .examples {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .info {
+    position: relative;
+    top: 18vh;
+    width: 97.5vw;
+  }
 }
