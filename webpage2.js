@@ -1,7 +1,9 @@
 const face = document.getElementById('picture');
 const description = document.getElementById('description');
-const port_button = document.getElementById('port_button');
-const about_button = document.getElementById('about_button');
+const portButton = document.getElementById('port_button');
+const aboutButton = document.getElementById('about_button');
+const sidePortButton = document.getElementById('side_port');
+const sideAboutButton = document.getElementById('side_about');
 const portfolio = document.getElementById('portfolio');
 const sq1 = document.getElementById('sq1');
 const sq2 = document.getElementById('sq2');
@@ -15,24 +17,16 @@ let clientWidth = document.documentElement.clientWidth;
 let totalScrollHeight = document.documentElement.scrollHeight;
 
 const getOffset = (element, side) => {
-  switch(side) {
-    case 'top':
-      let offsetTop = 0;
-      while(element) {
-        offsetTop += element.offsetTop;
-        element = element.offsetParent;
-      }
-      return offsetTop;
-      break;
-    case 'left':
-      let offsetLeft = 0;
-      while(element) {
-        offsetLeft += element.offsetLeft;
-        element = element.offsetParent;
-      }
-      return offsetLeft;
-      break;
+  let offset = 0;
+  while(element) {
+    if (side == 'top') {
+      offset += element.offsetTop;
+    } else {
+      offset += element.offsetLeft;
+    }
+    element = element.offsetParent;
   }
+  return offset;
 }
 
 const descriptionTop = getOffset(description, 'top');
@@ -127,14 +121,24 @@ if (document.documentElement.scrollTop > actionDistance) {
 }
 
 document.onscroll = handleScroll;
-port_button.onclick = () => { document.documentElement.scroll({
-  top: portfolioTop,
+
+portButton.onclick = () => { document.documentElement.scroll({
+  top: portfolioTop - descriptionTop,
   left: 0,
   behavior: 'smooth' }) };
-about_button.onclick = () => { document.documentElement.scroll({
-  top: aboutTop,
+aboutButton.onclick = () => { document.documentElement.scroll({
+  top: aboutTop - descriptionTop,
   left: 0,
   behavior: 'smooth' }) };
+sidePortButton.onclick = () => { document.documentElement.scroll({
+  top: portfolioTop - descriptionTop,
+  left: 0,
+  behavior: 'smooth' }) };
+sideAboutButton.onclick = () => { document.documentElement.scroll({
+  top: aboutTop - descriptionTop,
+  left: 0,
+  behavior: 'smooth' }) };
+
 sq1.onclick = () => { window.open('https://github.com/davbyron/HMM') };
 sq2.onclick = () => { window.open('https://sites.google.com/site/thekhoisanlanguages/tuu/xam') };
 sq3.onclick = () => { window.open('./media/thesis.pdf') };
