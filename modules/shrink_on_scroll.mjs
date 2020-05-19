@@ -43,6 +43,8 @@ function createScrollHandler(element, movingElement, actionDistanceMax, actionDi
       movingElement.style.position = 'sticky';
       movingElement.style.top = '2vh';
       movingElement.style.left = '7vw';
+      movingElement.style.height = '25vh';
+      movingElement.style.width = '25vh';
       scrolledPast = true;
     }
 
@@ -55,8 +57,6 @@ function createScrollHandler(element, movingElement, actionDistanceMax, actionDi
     movingElement.style.position = 'sticky';
     movingElement.style.top = '2vh';
     movingElement.style.left = '7vw';
-    movingElement.style.height = '25vh';
-    movingElement.style.width = '25vh';
     scrolledPast = true;
   }
 
