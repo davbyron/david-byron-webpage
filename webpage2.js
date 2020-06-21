@@ -15,6 +15,7 @@ const portfolio = document.getElementById('portfolio');
 const sq1 = document.getElementById('sq1');
 const sq2 = document.getElementById('sq2');
 const sq3 = document.getElementById('sq3');
+const sq4 = document.getElementById('sq4');
 const about = document.getElementById('about');
 const copyright = document.getElementById('copyright');
 const body = document.querySelector('body');
@@ -31,6 +32,7 @@ createClickHandler(aboutButton, (aboutTop - descriptionTop), 0);
 createClickHandler(sidePortButton, (portfolioTop - descriptionTop), 0);
 createClickHandler(sideAboutButton, (aboutTop - descriptionTop), 0);
 
-sq1.onclick = () => { window.open('https://github.com/davbyron/HMM') };
-sq2.onclick = () => { window.open('https://sites.google.com/site/thekhoisanlanguages/tuu/xam') };
-sq3.onclick = () => { window.open('./media/thesis.pdf') };
+sq1.onclick = () => { window.open('https://www.andreschwab.com') };
+sq2.onclick = () => { window.open('https://github.com/davbyron/HMM') };
+sq3.onclick = () => { window.open('https://sites.google.com/site/thekhoisanlanguages/tuu/xam') };
+sq4.onclick = () => { window.open('./media/thesis.pdf') };
