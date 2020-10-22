@@ -5,128 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Byron</title>
     <!-- LINKS -->
-    <link rel="stylesheet" href="./webpage2.css">
-    <link rel="shortcut icon" href="./media/headshot.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="shortcut icon" href="./headshot.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Roboto:wght@300;400;500&family=Noto+Sans+JP:wght@100;300;400&display=swap" rel="stylesheet">
     <!-- SCRIPTS -->
-    <script type="module" src="./modules/measurement_adjustments.mjs"></script>
-    <script type="module" src="./modules/scroll_to_on_click.mjs"></script>
-    <script type="module" src="./modules/get_scrolling_direction.mjs"></script>
-    <script type="module" src="./modules/get_offset.mjs"></script>
-    <script type="module" src="./modules/shrink_on_scroll.mjs"></script>
-    <script type="module" src="./webpage2.js"></script>
     <script src="https://kit.fontawesome.com/2a384867b2.js" crossorigin="anonymous" defer></script>
   </head>
   <body>
-    <!-- TOP HALF ("ON OPEN") -->
-    <div id="picture"></div>
-    <div id="description">
-      <p>data enthusiast &
-      <br><span class="emboldened">aspiring computational
-      <br>linguist</span></p>
-      <div id="port_button" class="button">PORTFOLIO</div>
-      <div id="about_button" class="button">ABOUT</div>
-    </div>
-    <div class="container">
-      <!-- BOTTOM HALF ("ON SCROLL") -->
-      <nav>
-        <div class="list">
-          <ul>
-            <li id="side_port" class="button">PORTFOLIO</li>
-            <li id="side_about" class="button">ABOUT</li>
-          </ul>
-        </div>
-        <!-- CLICKABLE ICONS -->
+    <div class="header">
+      <div class="face"></div>
+      <div class="header-info">
+        <div class="name">DAVID BYRON</div>
+        <div class="subtitle">Data enthusiast & aspiring computational linguist</div>
         <div class="icons">
           <a href="https://www.linkedin.com/in/david-byron-62a56b77/" class="fab fa-linkedin-in"></a>
           <a href="https://www.kaggle.com/davbyron" class="fab fa-kaggle"></a>
           <a href="https://github.com/davbyron" class="fab fa-github"></a>
           <a href="mailto: davbyron@icloud.com" class="fas fa-envelope"></a>
         </div>
-      </nav>
-      <div class="info">
-        <!-- PORTFOLIO -->
-        <div id="portfolio">
-          <div class="banner">
-            <p>PORTFOLIO</p>
-          </div>
-          <div class="examples">
-            <!-- EXAMPLE 1 -->
-            <div id="ex1" class="ex">
-              <div id="sq1" class="square"></div>
-              <div class="details">
-                <span class="emboldened">andreschwab.com <i class="fab fa-html5"></i> <i class="fab fa-css3-alt"></i> <i class="fab fa-js"></i> <i class="fab fa-react"></i></span>
-                <p>Custom-built personal website for Andre Schwab.</p>
-              </div>
-            </div>
-            <!-- EXAMPLE 2 -->
-            <div id="ex2" class="ex">
-              <div id="sq2" class="square"></div>
-              <div class="details">
-                <span class="emboldened">Hidden Markov Model (HMM) <i class="fab fa-python"></i></span>
-                <p>Probabilistically determines consonants from vowels in any Latin alphabet-using language given a set of words from that language.</p>
-              </div>
-            </div>
-            <!-- EXAMPLE 3 -->
-            <div id="ex3" class="ex">
-              <div id="sq3" class="square"></div>
-              <div class="details">
-                <span class="emboldened">Grammatical Sketch of |Xam <i class="fab fa-html5"></i></span>
-                <p>A webpage outlining the syntactic properties of |Xam, a now extinct Khoisan language.</p>
-              </div>
-            </div>
-            <!-- EXAMPLE 4 -->
-            <div id="ex4" class="ex">
-              <div id="sq4" class="square"></div>
-              <div class="details">
-                <span class="emboldened">Extraction from Conjuncts in Khoekhoe: An Argument for Cyclic Linearization <i class="fas fa-file-pdf"></i></span>
-                <p>In this thesis, I argue that the cyclic linearization approach to the locality of movement makes it possible to account in a principled way for the otherwise puzzling phenomenon of SLF-coordination as it manifests in the Khoisan language Khoekhoe.</p>
-              </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="content-block">
+        <div class="content-block-header">PROJECTS</div>
+        <div class="projects">
+          <div class="project" id="andre">
+            <div class="project-name">andreschwab.com <i class="fab fa-html5"></i> <i class="fab fa-css3-alt"></i> <i class="fab fa-js"></i> <i class="fab fa-react"></i> - (<a href="https://andreschwab.com">link</a>)</div>
+            <div class="project-description">
+              Custom-built personal website for Andre Schwab.
             </div>
           </div>
-        </div>
-        <!-- ABOUT -->
-        <div id="about">
-          <div class="banner">
-            <p>ABOUT</p>
+          <div class="project" id="hmm">
+            <div class="project-name">Hidden Markov Model (HMM) <i class="fab fa-python"></i> - (<a href="https://github.com/davbyron/HMM">repository</a>)</div>
+            <div class="project-description">
+              Probabilistically determines consonants from vowels in any Latin alphabet-using language given a set of words from that language.
+            </div>
           </div>
-          <div class="particulars">
-            <p>
-              Hello and welcome! I'm David, a professional linguist and technology enthusiast.
-              <br>
-              <br>
-              Throughout my education, I focused primarily on syntactic phenomena in hopes of
-              finding the answers to the following questions: (i) what are the fundamental syntactic
-              operations provided by the human language faculty?; and (ii) what constraints are they
-              subject to, and why? This work culminated in my Master's thesis "Extraction from Conjuncts
-              in Khoekhoe: An Argument for Cyclic Linearization" advised by
-              <a href="https://sites.google.com/view/ezyman/home?authuser=0" class="link">Erik Zyman</a>
-              at the University of Chicago, a PDF of which is available above.
-              <br>
-              <br>
-              Nowadays, I'm becoming more and more interested in computer science and how it intersects
-              with linguistics. I'm vastly interested in artificial intelligence, natural language understanding,
-              computational linguistic methods, logic, deep learning, and underrepresented/understudied languages. Check out <a href="./media/toggl.pdf" class="link">what I spent my time on last week</a>.
-              <br>
-              <br>
-              Outside of work, I'm a huge cooking fanatic. Having worked my way through the restaurant
-              industry up to a front of house position in a
-              <a href="http://www.bandofbohemia.com/" class="link">Michelin-starred brewpub</a> I've
-              come to learn a lot of new and thoughtful ways to prepare food and drinks. Other than this,
-              I spend a lot of time cycling and at drag events.
-              <br>
-              <br>
-              This website is meant to be a representation of my work and I. However, if you'd like to
-              dive deeper or get in contact with me, please use one of the buttons near my face.
-              <br>
-            </p>
+          <div class="project" id="thesis">
+            <div class="project-name">Extraction from Conjuncts in Khoekhoe: An Argument for Cyclic Linearization <i class="fas fa-file-pdf"></i> - (<a href="./thesis.pdf">link</a>)</div>
+            <div class="project-description">
+              In this thesis, I argue that the cyclic linearization approach to the locality of movement makes it possible to account in a principled way for the otherwise puzzling phenomenon of SLF-coordination as it manifests in the Khoisan language Khoekhoe.
+            </div>
+          </div>
+          <div class="project" id="xam">
+            <div class="project-name">Grammatical Sketch of |Xam <i class="fab fa-html5"></i> - (<a href="https://sites.google.com/site/thekhoisanlanguages/tuu/xam">link</a>)</div>
+            <div class="project-description">
+              A webpage outlining the syntactic properties of |Xam, a now extinct Khoisan language.
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- COPYRIGHT -->
-    <div id="copyright">
-      <p>&copy; 2020 David Byron</p>
+      <div class="content-block">
+        <div class="content-block-header">ABOUT</div>
+        <div class="about-content">
+          Hello and welcome! I'm David, a professional linguist and technology enthusiast.
+          <br>
+          <br>
+          Throughout my education, I focused primarily on syntactic phenomena in hopes of
+          finding the answers to the following questions: (i) what are the fundamental syntactic
+          operations provided by the human language faculty?; and (ii) what constraints are they
+          subject to, and why? This work culminated in my Master's thesis "Extraction from Conjuncts
+          in Khoekhoe: An Argument for Cyclic Linearization" advised by
+          <a href="https://sites.google.com/view/ezyman/home?authuser=0" class="link">Erik Zyman</a>
+          at the University of Chicago, a PDF of which is available above.
+          <br>
+          <br>
+          Nowadays, I'm becoming more and more interested in computer science and how it intersects
+          with linguistics. I'm vastly interested in artificial intelligence, natural language understanding,
+          computational linguistic methods, logic, deep learning, and underrepresented/understudied languages. Check out <a href="./media/toggl.pdf" class="link">what I spent my time on last week</a>.
+          <br>
+          <br>
+          Outside of work, I'm a huge cooking fanatic. Having worked my way through the restaurant
+          industry up to a front of house position in a
+          <a href="http://www.bandofbohemia.com/" class="link">Michelin-starred brewpub</a> I've
+          come to learn a lot of new and thoughtful ways to prepare food and drinks. Other than this,
+          I spend a lot of time cycling  gardening and at drag events (when the world isn't in total chaos).
+          <br>
+          <br>
+          This website is meant to be a representation of my work and I. However, if you'd like to
+          dive deeper or get in contact with me, please use one of the buttons near my face.
+        </div>
+      </div>
     </div>
   </body>
 </html>
