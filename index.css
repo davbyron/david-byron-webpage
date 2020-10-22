@@ -56,9 +56,25 @@ body {
 
 .fa-linkedin-in, .fa-github, .fa-envelope, .fa-kaggle {
   font-size: 5vh;
-  padding: 0 10px;
+  padding: 0 0.5vw;
   color: black;
   text-decoration: none;
+}
+
+.fa-linkedin-in:hover {
+  color: #2867B2;
+}
+
+.fa-kaggle:hover {
+  color: #20beff;
+}
+
+.fa-github:hover {
+  color: #545454;
+}
+
+.fa-envelope:hover {
+  color: #594532;
 }
 
 /* Content CSS */
