@@ -32,7 +32,7 @@ body {
   position: relative;
   top: 1vh;
   height: 50%;
-  font-family: 'Staatliches', cursive;
+  font-family: 'Staatliches', sans-serif;
   font-size: 10vh;
   letter-spacing: 0.05em;
   /* border: 1px solid pink; */
@@ -136,6 +136,14 @@ body {
   }
 
   .name {
-    font-size: 8vh;
+    font-size: 9vh;
+  }
+
+  .projects {
+    width: 95%;
+  }
+
+  .about-content {
+    width: 95%;
   }
 }
