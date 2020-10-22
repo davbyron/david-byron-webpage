@@ -134,4 +134,8 @@ body {
   .face {
     display: none;
   }
+
+  .name {
+    font-size: 9vh;
+  }
 }
