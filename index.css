@@ -180,17 +180,13 @@ body {
   }
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 991px) {
   body {
     margin: 0;
     width: 100%;
     border: 0;
     padding: 0;
   }
-
-  /* .face {
-    display: none;
-  } */
 
   .name {
     font-size: 9vh;
