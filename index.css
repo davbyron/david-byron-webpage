@@ -4,6 +4,7 @@ body {
   width: 64%;
   border-left: 13vw solid;
   border-right: 13vw solid;
+  border-top: 0;
   border-image: linear-gradient(#f085d3, 50%, #ffffff, #ffffff) 10 round;
   /* border-right: 2in double black; */
   padding: 2.5vh 5vw;
