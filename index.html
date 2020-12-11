@@ -6,84 +6,25 @@
     <title>David Byron</title>
     <!-- LINKS -->
     <link rel="stylesheet" href="./index.css">
-    <link rel="shortcut icon" href="./headshot.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Roboto:wght@300;400;500&family=Noto+Sans+JP:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./icon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!-- SCRIPTS -->
-    <script src="https://kit.fontawesome.com/2a384867b2.js" crossorigin="anonymous" defer></script>
+    <script type="text/javascript" src="./index.js" defer></script>
   </head>
   <body>
-    <div class="header">
-      <div class="face"></div>
-      <div class="header-info">
-        <div class="name">DAVID BYRON</div>
-        <div class="subtitle">Data enthusiast & aspiring computational linguist</div>
-        <div class="icons">
-          <a href="https://www.linkedin.com/in/david-byron-62a56b77/" class="fab fa-linkedin-in"></a>
-          <a href="https://www.kaggle.com/davbyron" class="fab fa-kaggle"></a>
-          <a href="https://github.com/davbyron" class="fab fa-github"></a>
-          <a href="mailto: davbyron@icloud.com" class="fas fa-envelope"></a>
+    <div class="main">
+      <div class="info">
+        <img src="./myface.jpg" alt="myface">
+        <div class="links">
+          <a href="https://www.linkedin.com/in/david-byron-62a56b77/">LinkedIn</a><br>
+          <a href="https://www.kaggle.com/davbyron">Kaggle</a><br>
+          <a href="https://github.com/davbyron">GitHub</a><br>
+          email: davbyron [at] icloud [dot] com
         </div>
       </div>
-    </div>
-    <div class="content">
-      <div class="content-block">
-        <div class="content-block-header">PROJECTS</div>
-        <div class="projects">
-          <div class="project-category">
-            <div class="project-category-title">Machine Learning 🤖</div>
-            <div class="project" id="khoekhoe_sr_1">
-              <div class="project-name">A First Shot at Speech Recognition for Khoekhoe <i class="fab fa-python"></i> - (<a href="https://davidbyron.info/blog/speech%20recognition/neural%20networks/computational%20linguistics/khoekhoe/2020/11/21/First-Attempts-at-Speech-Recognition-for-Khoekhoe.html">link</a>)</div>
-              <div class="project-description">
-                Early steps toward a fully functioning speech recognition system for Khoekhoe. Predicts phones
-                in the language using convolutional neural networks via fastai and PyTorch with an average
-                accuracy of 30-35%.
-              </div>
-            </div>
-            <div class="project" id="text_classification">
-              <div class="project-name">A Comparison of TF-IDF, Word2Vec, and Transfer Learning for Text Classification <i class="fab fa-python"></i> - (<a href="https://davidbyron.info/blog/tf-idf/word2vec/neural%20networks/text%20classification/natural%20language%20processing/2020/10/31/Text-Classification-Comparison.html">link</a>)</div>
-              <div class="project-description">
-                A step-by-step notebook that utilizes regular expressions, n-grams, SpaCy, gensim,
-                and neural networks with disaster tweet data in order to compare the predictive accuracy of
-                some of the most widely used text classification approaches today.
-              </div>
-            </div>
-            <div class="project" id="hmm">
-              <div class="project-name">Hidden Markov Model (HMM) <i class="fab fa-python"></i> - (<a href="https://github.com/davbyron/HMM">repository</a>)</div>
-              <div class="project-description">
-                A statistical Markov model built in Python from scratch that predicts consonants and
-                vowels in any Latin alphabet-using language using the Baum-Welch algorithm.
-              </div>
-            </div>
-          </div>
-          <div class="project-category">
-            <div class="project-category-title">Web Development 💻</div>
-            <div class="project" id="andre">
-              <div class="project-name">andreschwab.com <i class="fab fa-html5"></i> <i class="fab fa-css3-alt"></i> <i class="fab fa-js"></i> <i class="fab fa-react"></i> - (<a href="https://andreschwab.com">link</a>)</div>
-              <div class="project-description">
-                Custom-built personal website for Andre Schwab.
-              </div>
-            </div>
-          </div>
-          <div class="project-category">
-            <div class="project-category-title">Academic 📚</div>
-            <div class="project" id="thesis">
-              <div class="project-name">Extraction from Conjuncts in Khoekhoe: An Argument for Cyclic Linearization <i class="fas fa-file-pdf"></i> - (<a href="./thesis.pdf">link</a>)</div>
-              <div class="project-description">
-                In this thesis, I tackle a violation of the otherwise highly robust Coordinate Structure Constraint, so-called “SLF-coordination”, that has yet to be fully understood. I argue that the cyclic linearization approach to the locality of movement makes it possible to account for this puzzling phenomenon as it manifests in the Khoisan language Khoekhoe.
-              </div>
-            </div>
-            <div class="project" id="xam">
-              <div class="project-name">Grammatical Sketch of |Xam <i class="fab fa-html5"></i> - (<a href="https://sites.google.com/site/thekhoisanlanguages/tuu/xam">link</a>)</div>
-              <div class="project-description">
-                A webpage outlining the syntactic properties of |Xam, a now extinct Khoisan language.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="content-block">
-        <div class="content-block-header">ABOUT</div>
-        <div class="about-content">
+      <div class="content">
+        <div class="about">
           Hello and welcome! I'm David, a classically trained linguist and technology enthusiast.
           <br>
           <br>
@@ -98,7 +39,8 @@
           <br>
           Nowadays, I'm becoming more and more interested in computer science and how it intersects
           with linguistics. I'm vastly interested in artificial intelligence, natural language understanding,
-          computational linguistic methods, logic, deep learning, and underrepresented/understudied languages. Check out <a href="./toggl.pdf">what I spent my time on last week</a>.
+          computational linguistic methods, logic, deep learning, and underrepresented/understudied languages.
+          Check out <a href="./toggl.pdf">what I spent my time on last week</a>.
           <br>
           <br>
           Outside of work, I'm a huge cooking fanatic. Having worked my way through the restaurant
@@ -109,7 +51,143 @@
           <br>
           <br>
           This website is meant to be a representation of my work and I. However, if you'd like to
-          dive deeper or get in contact with me, please use one of the buttons at the top of this page.
+          dive deeper or get in contact with me, please use one of the buttons near my face.
+        </div>
+        <div class="projects">
+          <div class='section'><b><u>Projects</u></b></div>
+          <br>
+          ‣ <i>Machine Learning</i>
+          <br>
+          <br>
+          <b>A First Shot at Speech Recognition for Khoekhoe</b> - Early steps toward a fully functioning
+          speech recognition system for Khoekhoe. Predicts phones in the language using convolutional
+          neural networks via fastai and PyTorch with an average accuracy of 30-35%. (<a href="https://davidbyron.info/blog/speech%20recognition/neural%20networks/computational%20linguistics/khoekhoe/2020/11/21/First-Attempts-at-Speech-Recognition-for-Khoekhoe.html">link</a>)
+          <br>
+          <br>
+          <b>A Comparison of TF-IDF, Word2Vec, and Transfer Learning for Text Classification</b> - A
+          step-by-step notebook that utilizes regular expressions, n-grams, SpaCy, gensim, and neural
+          networks with disaster tweet data in order to compare the predictive accuracy of some of
+          the most widely used text classification approaches today. (<a href="https://davidbyron.info/blog/tf-idf/word2vec/neural%20networks/text%20classification/natural%20language%20processing/2020/10/31/Text-Classification-Comparison.html">link</a>)
+          <br>
+          <br>
+          <b>Hidden Markov Model</b> - A statistical Markov model built in Python from scratch that
+          predicts consonants and vowels in any Latin alphabet-using language using the Baum-Welch
+          algorithm. (<a href="https://github.com/davbyron/HMM">repository</a>)
+          <br>
+          <br>
+          <br>
+          ‣ <i>Academic</i>
+          <br>
+          <br>
+          <b>Extraction from Conjuncts in Khoekhoe: An Argument for Cyclic Linearization</b> - In
+          this thesis, I tackle a violation of the otherwise highly robust Coordinate Structure Constraint,
+          so-called “SLF-coordination”, that has yet to be fully understood. I argue that the cyclic
+          linearization approach to the locality of movement makes it possible to account for this
+          puzzling phenomenon as it manifests in the Khoisan language Khoekhoe. (<a href="./thesis.pdf">link</a>)
+          <br>
+          <br>
+          <b>Grammatical Sketch of |Xam</b> - A webpage outlining the syntactic properties of |Xam, a
+          now extinct Khoisan language. (<a href="https://sites.google.com/site/thekhoisanlanguages/tuu/xam">link</a>)
+          <br>
+          <br>
+          <br>
+          ‣ <i>Web Development</i>
+          <br>
+          <br>
+          <b>andreschwab.com</b> - Custom-built personal website for Andre Schwab. (<a href="https://andreschwab.com/">link</a>)
+          <br>
+          <br>
+        </div>
+        <div class="gallery">
+          <div class='section'><b><u>Gallery</u></b></div>
+          <br>
+          <div class="slideshow">
+            <div class="slide">
+              <img src="./gallery/flowers.jpg" alt="flowers">
+            </div>
+            <div class="slide">
+              <img src="./gallery/fair.jpg" alt="fair">
+            </div>
+            <div class="slide">
+              <img src="./gallery/carrick.jpg" alt="carrick_a_rede">
+            </div>
+            <div class="slide">
+              <img src="./gallery/giantscauseway.jpg" alt="giants_causeway">
+            </div>
+            <div class="slide">
+              <img src="./gallery/howth.jpg" alt="howth">
+            </div>
+            <div class="slide">
+              <img src="./gallery/stadium.jpg" alt="stadium">
+            </div>
+            <div class="slide">
+              <img src="./gallery/killarney.jpg" alt="killarney">
+            </div>
+            <div class="slide">
+              <img src="./gallery/killarney2.jpg" alt="killarney2">
+            </div>
+            <div class="slide">
+              <img src="./gallery/bbridge.jpg" alt="brooklyn_bridge">
+            </div>
+            <div class="slide">
+              <img src="./gallery/canalgreenwich.jpg" alt="canal_greenwich">
+            </div>
+            <div class="slide">
+              <img src="./gallery/govisland.jpg" alt="governors_island">
+            </div>
+            <div class="slide">
+              <img src="./gallery/wsp.jpg" alt="wsp">
+            </div>
+            <div class="slide">
+              <img src="./gallery/orangerie1.jpg" alt="orangerie1">
+            </div>
+            <div class="slide">
+              <img src="./gallery/orangerie2.jpg" alt="orangerie2">
+            </div>
+            <div class="slide">
+              <img src="./gallery/nymph.jpg" alt="nympheas">
+            </div>
+            <div class="slide">
+              <img src="./gallery/sacrecoeur.jpg" alt="sacre_coeur">
+            </div>
+            <div class="slide">
+              <img src="./gallery/montsouris.jpg" alt="parc_montsouris">
+            </div>
+            <div class="slide">
+              <img src="./gallery/saintmichel1.jpg" alt="saintmichel1">
+            </div>
+            <div class="slide">
+              <img src="./gallery/saintmichel2.jpg" alt="saintmichel2">
+            </div>
+            <div class="slide">
+              <img src="./gallery/toureiffel.jpg" alt="tour_eiffel">
+            </div>
+            <div class="slide">
+              <img src="./gallery/ciutadella.jpg" alt="ciutadella">
+            </div>
+            <div class="slide">
+              <img src="./gallery/sagrada1.jpg" alt="sagrada1">
+            </div>
+            <div class="slide">
+              <img src="./gallery/sagrada2.jpg" alt="sagrada2">
+            </div>
+            <div class="slide">
+              <img src="./gallery/tibidabo.jpg" alt="tibidabo">
+            </div>
+            <div class="slide">
+              <img src="./gallery/barcelona.jpg" alt="barcelona">
+            </div>
+            <div class="slide">
+              <img src="./gallery/auckland.jpg" alt="auckland">
+            </div>
+            <div class="slide">
+              <img src="./gallery/waiheke.jpg" alt="waiheke">
+            </div>
+
+            <a class="next" onclick="changeSlides(1)">&#10095;</a>
+            <a class="prev" onclick="changeSlides(-1)">&#10094;</a>
+            <span id="picDescription"></span>
+          </div>
         </div>
       </div>
     </div>

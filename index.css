@@ -1,218 +1,50 @@
 body {
-  display: block;
-  margin: 0 auto;
-  width: 64%;
-  border-left: 13vw solid;
-  border-right: 13vw solid;
-  border-top: 0;
-  border-image: linear-gradient(#f085d3, 50%, #ffffff, #ffffff) 10 round;
-  /* border-right: 2in double black; */
-  padding: 2.5vh 5vw;
+  margin: 5vh 10vw;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f2efe9;
+  color: #252627;
 }
 
-/* Header CSS */
-
-.header {
-  display: flex;
-  position: relative;
-  height: 25vh;
-  width: 95%;
-  top: 2.5vh;
-  left: 2.5vw;
-  /* border: 1px solid black; */
-}
-
-.face {
-  height: 25vh;
-  width: 25vh;
-  background-image: url('./headshot.jpg');
-  background-size: contain;
-  border-radius: 100%;
-  box-shadow: 0 0 1.5vh #824a73;
-}
-
-.header-info {
-  position: relative;
-  left: 2.5vw;
+.info {
+  margin-left: 2vw;
+  margin-bottom: 1vw;
+  width: 25.5vw;
+  float: right;
   /* border: 1px solid blue; */
 }
 
-.name {
-  position: relative;
-  top: 1vh;
-  height: 50%;
-  font-family: 'Staatliches', sans-serif;
-  font-size: 10vh;
-  letter-spacing: 0.05em;
-  text-shadow: 0 0 2mm rgba(130, 74, 115, 0.5);
-  -webkit-text-stroke: 0.4mm #ffffff;
-  /* border: 1px solid pink; */
+img {
+  max-width:100%;
+  max-height:100%;
 }
-
-.subtitle {
-  position: relative;
-  top: -2vh;
-  left: 0.2vw;
-  font-family: 'Roboto', sans-serif;
-  font-size: 3vh;
-  font-weight: 300;
-}
-
-.icons {
-  /* border: 1px solid orange; */
-  position: relative;
-  left: -0.175vw;
-}
-
-.fa-linkedin-in, .fa-github, .fa-envelope, .fa-kaggle {
-  font-size: 5vh;
-  padding: 0 0.5vw;
-  color: black;
-  text-decoration: none;
-}
-
-.fa-linkedin-in:hover, .fa-kaggle:hover, .fa-github:hover, .fa-envelope:hover {
-  color: #f085d3;
-}
-
-/* Content CSS */
 
 .content {
-  position: relative;
-  top: 9.5vh; /* + 2.5vh for header offset */
-  left: 2.5vw;
-  width: 95%;
-  /* border: 1px solid blue; */
-}
-
-.content-block {
-  margin-bottom: 5vh;
-}
-
-.content-block-header {
-  margin-bottom: 2vh;
-  font-family: 'Roboto', sans-serif;
-  font-size: 5vh;
-  font-weight: 500;
-  text-shadow: -0.1vw 0.1vw #000000;
-  color: #ffffff;
-  border-bottom: 0.25mm solid;
-  background-image: linear-gradient(to right, #ffffff, 3%, #f085d3, 20%, #ffffff, #ffffff);
-  -webkit-text-stroke: 0.2mm black;
+  text-align: justify;
+  /* border: 1px solid red; */
 }
 
 .projects {
-  position: relative;
-  left: 2vw;
-  width: 75%;
-  /* border: 1px dotted red; */
+  margin: 2vh 0;
 }
 
-.project-category {
-  margin-bottom: 2vh;
+.section {
+  color: #904e55;
 }
 
-.project-category-title {
-  font-family: 'Courier', monospace;
-  font-weight: 300;
-  font-size: 2.5vh;
-  border-bottom: 0.25mm solid;
-  margin-bottom: 1vh;
-  width: 50%;
+a {
+  color: #564e58;
 }
 
-.project {
-  margin-bottom: 1.25vh;
-  margin-left: 2vw;
+.slideshow {
+  max-width:100%;
+  max-height:100%;
 }
 
-.project-name {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-size: 2vh;
+.slide {
+  display: none;
 }
 
-.project-description {
-  margin-left: 2vw;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 300;
-  font-size: 1.75vh;
-  /* border: 1px solid yellow; */
-}
-
-.about-content {
-  width: 85%;
-  margin-left: 2vw;
-  margin-bottom: 10vh;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 2vh;
-  line-height: 3vh;
-}
-
-@media all and (orientation: portrait) {
-  .header {
-    left: 0;
-  }
-
-  .face {
-    display: none;
-  }
-}
-
-@media all and (min-width: 768px) and (max-width: 768px) {
-  body {
-    margin: 0;
-    width: 100%;
-    border: 0;
-    padding: 0;
-  }
-
-  .header {
-    left: 0;
-  }
-
-  .face {
-    display: none;
-  }
-
-  .project-category-title {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 991px) {
-  body {
-    margin: 0;
-    width: 100%;
-    border: 0;
-    padding: 0;
-  }
-
-  .name {
-    font-size: 9vh;
-  }
-
-  .content-block-header {
-    text-shadow: -0.25vw 0.25vw #000000;
-    -webkit-text-stroke: 0.25mm black;
-  }
-
-  .projects {
-    width: 95%;
-  }
-
-  .project-category-title {
-    width: 100%;
-  }
-
-  .about-content {
-    width: 95%;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .content-block-header {
-    background-image: linear-gradient(to right, #ffffff, 5%, #f085d3, 30%, #ffffff);
-  }
+.prev, .next {
+  float: right;
+  cursor: pointer;
 }
