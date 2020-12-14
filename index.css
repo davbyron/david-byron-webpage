@@ -5,8 +5,8 @@ body {
   color: #252627;
 }
 
-.info {
-  margin-left: 2vw;
+.face_container {
+  margin-left: 3vw;
   margin-bottom: 1vw;
   width: 25.5vw;
   float: right;
@@ -21,6 +21,16 @@ img {
 .content {
   text-align: justify;
   /* border: 1px solid red; */
+}
+
+.title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.links {
+  margin-bottom: 2vh;
 }
 
 .projects {
