@@ -1,3 +1,49 @@
+// vhToPx() and vwToPx() convert whole vh and vw units into pixels,
+// respectively, when given information about the document/window
+// height and width.
+
+let clientHeight = document.documentElement.clientHeight;
+let clientWidth = document.documentElement.clientWidth;
+let scrollHeight = document.documentElement.scrollHeight;
+
+const vhToPx = (amount) => {
+  let pixelHeight = (amount * 0.01) * (scrollHeight - clientHeight);
+  return pixelHeight;
+}
+
+const vwToPx = (amount) => {
+  let pixelWidth = (amount * 0.01) * clientWidth;
+  return pixelWidth;
+}
+
+// getOffset() is a function that returns either the actual
+// offset top or left values of the specified element by tracing
+// the offset value of each parent element.
+const getOffset = (element, side) => {
+  let offset = 0;
+  while(element) {
+    if (side == 'top') {
+      offset += element.offsetTop;
+    } else {
+      offset += element.offsetLeft;
+    }
+    element = element.offsetParent;
+  }
+  return offset;
+}
+
+// createClickHandler() creates a click event on the specified
+// element that scrolls to a specific location on the webpage.
+function createClickHandler(element, down, over) {
+  element.onclick = () => {
+    document.documentElement.scroll({
+      top: down,
+      left: over,
+      behavior: 'smooth'
+    });
+  };
+}
+
 const slideTitles = ['Flowers at Home, 2012',
                     'Fair Ride, 2013',
                     'Carrick-a-Rede, 2014',
@@ -38,15 +84,53 @@ const showSlides = (n) => {
     slides[i].style.display = 'none';
   }
 
-  slides[slideIndex-1].style.display = 'block';
+  let currentSlide = slides[slideIndex-1]
 
-  text = slideTitles[slideIndex-1];
+  currentSlide.style.display = 'flex';
+
+  let text = slideTitles[slideIndex-1];
+
   document.getElementById('picDescription').innerHTML = text;
+  // Set padding left offset to the (parent width - img width) / 2
+  document.getElementById('picDescription').style.paddingLeft = ((document.getElementById('slideshow').clientWidth - currentSlide.childNodes[1].clientWidth) / 2.0).toString() + 'px'
+
+  console.log('Slideshow width:')
+  console.log(document.getElementById('slideshow').clientWidth);
+  console.log('Pic width:');
+  console.log(slides[slideIndex-1].childNodes[1]);
+  console.log(slides[slideIndex-1].childNodes[1].clientWidth);
+  console.log('New offset?:');
+  console.log(((document.getElementById('slideshow').clientWidth - currentSlide.childNodes[1].clientWidth) / 2.0).toString() + "px");
 }
 
 let slideIndex = Math.floor(Math.random() * slideTitles.length); // make this random
-showSlides(slideIndex);
+
+window.onload = (event) => {
+  showSlides(slideIndex);
+};
 
 const changeSlides = (n) => {
   showSlides(slideIndex += n);
 }
+
+const showImgUI = () => {
+  document.getElementById('prev').style.display = 'flex';
+  document.getElementById('next').style.display = 'flex';
+  // document.getElementById('picDescription').style.display = 'flex';
+}
+
+const removeImgUI = () => {
+  document.getElementById('prev').style.display = 'none';
+  document.getElementById('next').style.display = 'none';
+  // document.getElementById('picDescription').style.display = 'none';
+}
+
+const scrollButton = document.getElementById('scroll');
+const header = document.getElementById('header');
+const aboutSection = document.getElementById('about');
+
+const aboutTop = getOffset(aboutSection, 'top');
+// const bodyTop = getOffset(document.body, 'top');
+
+createClickHandler(scrollButton, (aboutTop - vhToPx(1)), 0);
+createClickHandler(header, (aboutTop - vhToPx(1)), 0);
