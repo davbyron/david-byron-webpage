@@ -14,7 +14,7 @@ body {
   height: 90vh;
 }
 
-.header {
+header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -279,7 +279,7 @@ body {
   text-align: justify;
 }
 
-.section {
+h2 {
   font-family: 'Archivo Black', sans-serif;
   font-size: 3em;
   color: black;
@@ -308,10 +308,6 @@ img {
   text-align: justify;
 }
 
-.title {
-  font-family: 'Archivo Black', sans-serif;
-}
-
 .links {
   margin-bottom: 2vh;
 }
@@ -320,10 +316,13 @@ img {
   margin: 2vh 0;
 }
 
-.subtitle {
-  font-family: 'Big Shoulders Inline Text', sans-serif;
+h3 {
+  margin: 0px 0 0 0;
+  font-weight: 400;
+  font-family: 'Dosis', sans-serif;
   font-size: 1.5em;
   color: #ea3501;
+  text-shadow: 0 0 3px rgba(234, 51, 1, 0.5);
   text-transform: uppercase;
 }
 

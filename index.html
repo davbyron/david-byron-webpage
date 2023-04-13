@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./index.css">
     <link rel="shortcut icon" href="./icon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato:wght@700&family=Archivo+Black&family=Big+Shoulders+Inline+Text&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Archivo+Black&family=Dosis:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- SCRIPTS -->
     <script type="text/javascript" src="./index.js" defer></script>
@@ -17,7 +17,7 @@
   <body>
     <div class="on-open">
       <!-- Header div contains face image and revolving text -->
-      <div class="header" id="header">
+      <header>
         <div class="revolving-text">
           <div class="face">
             <div class="face-container"></div>
@@ -651,7 +651,7 @@
             </g>
           </svg>
         </div>
-      </div>
+      </header>
       <!-- Scroll div only contains scroll button -->
       <div class="scroll" id="scroll">
         <span class="material-icons">expand_more</span>
@@ -660,100 +660,73 @@
     <div class="separator"></div>
     <div class="on-scroll">
       <!-- About me div with external links -->
-      <div class="about" id="about">
-        <div class="section"><b>ABOUT</b></div>
-        Nice to meet you on the web! I'm David, an Artist and Software Engineer at <a href="https://www.lymba.com/">Lymba</a>.
-        <br>
-        <br>
-        At Lymba, I work primarily with NLP tools and knowledge graphs. My day-to-day can really vary,
+      <section class="about" id="about">
+        <h2>ABOUT</h2>
+        <p>Nice to meet you on the web! I'm David, an Artist and Software Engineer at <a href="https://www.lymba.com/">Lymba</a>.</p>
+
+        <p>At Lymba, I work primarily with NLP tools and knowledge graphs. My day-to-day can really vary,
         but I'm often responsible for ontology building, creating NLP resources, UI/UX design, various web development tasks,
-        maintaining RESTful Python APIs, client demos, documentation writing, and quality assurance testing.
-        <br>
-        <br>
-        Recently, I've found myself trying to mesh my more recent aptitude for computer science with my
+        maintaining RESTful Python APIs, client demos, documentation writing, and quality assurance testing.</p>
+
+        <p>Recently, I've found myself trying to mesh my more recent aptitude for computer science with my
         lifelong love for art. As a result, I've engaged more and more in web development and UI/UX design in recent years. 
         I love the challenge of making a webpage both beautiful and accessible; and constructing a product end-to-end has
         proven a rewarding experience. I'm looking to do more of that in the future, hopefully bringing new creative
-        UI/UX concepts to life. 
-        <br>
-        <br>
-        Throughout my education, I focused primarily on syntactic phenomena in hopes of
+        UI/UX concepts to life.</p>
+
+        <p>Throughout my education, I focused primarily on syntactic phenomena in hopes of
         finding the answers to the following questions: (i) what are the fundamental syntactic
         operations provided by the human language faculty?; and (ii) what constraints are they
-        subject to, and why? This work culminated in my Master's thesis "Extraction from Conjuncts
-        in Khoekhoe: An Argument for Cyclic Linearization" advised by
-        <a href="https://sites.google.com/view/ezyman/home?authuser=0">Erik Zyman</a>
-        at the University of Chicago, a PDF of which is available below.
-        <br>
-        <br>
-        Outside of work, I'm a huge cooking fanatic. Having worked my way through the restaurant
+        subject to, and why? This work culminated in my Master's thesis <cite><a href="./thesis.pdf">Extraction from Conjuncts
+        in Khoekhoe: An Argument for Cyclic Linearization</a></cite> advised by Erik Zyman
+        at the University of Chicago</p>
+
+        <p>Outside of work, I'm a huge cooking fanatic. Having worked my way through the restaurant
         industry up to a front of house position in a Michelin-starred brewpub, I've
         come to learn a lot of new and thoughtful ways to prepare food and drinks. Other than this,
-        I spend a lot of time cycling, gardening, playing video games, making art of all kinds, and at drag events.
-        <br>
-        <br>
+        I spend a lot of time cycling, gardening, playing video games, making art of all kinds, and at drag events.</p>
+
         <a href="mailto:davbyron@icloud.com"><i class="fas fa-envelope-square"></i></a>
         <a href="https://github.com/davbyron"><i class="fab fa-github-square"></i></a>
         <a href="https://www.linkedin.com/in/david-byron-62a56b77/"><i class="fab fa-linkedin"></i></a>
         <a href="https://www.instagram.com/bavdyron/"><i class="fab fa-instagram-square"></i></a>
-      </div>
+      </section>
       <div class="separator"></div>
       <!-- PROJECTS -->
-      <div class="projects">
-        <div class="section"><b>PROJECTS</b></div>
+      <section class="projects">
+        <h2>PROJECTS</h2>
         <!-- WEB DEVELOPMENT -->
-        <span class="subtitle">Web Development</span>
-        <br>
-        <b>Unnamed Chess Battle Game (in development)</b> – Blog coming soon. For now, follow my progress on GitHub! (<a href="https://github.com/davbyron/chess-battle">repository</a>)
-        <br>
-        <br>
-        <b>studynorthernpomo.com</b> – Learn Northern Pomo! (<a href="https://www.studynorthernpomo.com/">link</a>)
-        <br>
-        <br>
-        <b>davidbyron.info</b> - Custom-built personal website for myself. (<a href="#">you are here</a>)
-        <br>
-        <br>
-        <b>andreschwab.com</b> - Custom-built personal website for Andre Schwab. (<a href="https://www.andreschwab.com/">link</a>)
-        <br>
-        <br>
-        <br>
-        <!-- COMP LX -->
-        <span class="subtitle">computational linguistics</span>
-        <br>
-        <b>A First Shot at Speech Recognition for Khoekhoe</b> - Early steps toward a fully functioning
-        speech recognition system for Khoekhoe. Predicts phones in the language using convolutional
-        neural networks via fastai and PyTorch with an average accuracy of 30-35%. (<a href="https://davidbyron.info/blog/speech%20recognition/neural%20networks/computational%20linguistics/khoekhoe/2020/11/21/First-Attempts-at-Speech-Recognition-for-Khoekhoe.html">link</a>)
-        <br>
-        <br>
-        <b>A Comparison of TF-IDF, Word2Vec, and Transfer Learning for Text Classification</b> - A
-        step-by-step notebook that utilizes regular expressions, n-grams, SpaCy, gensim, and neural
-        networks with disaster tweet data in order to compare the predictive accuracy of some of
-        the most widely used text classification approaches today. (<a href="https://davidbyron.info/blog/tf-idf/word2vec/neural%20networks/text%20classification/natural%20language%20processing/2020/10/31/Text-Classification-Comparison.html">link</a>)
-        <br>
-        <br>
-        <b>Hidden Markov Model</b> - A statistical Markov model built in Python from scratch that
-        predicts consonants and vowels in any Latin alphabet-using language using the Baum-Welch
-        algorithm. (<a href="https://github.com/davbyron/HMM">repository</a>)
-        <br>
-        <br>
-        <br>
+        <h3>Web Development</h3>
+        <p>
+         <b>Unnamed Chess Battle Game (in development)</b> - Blog coming soon. For now, follow my progress on GitHub! (<a href="https://github.com/davbyron/chess-battle">repository</a>)
+        </p>
+        <p>
+         <b>studynorthernpomo.com</b> - Learn Northern Pomo! (<a href="https://www.studynorthernpomo.com/">link</a>)
+        </p>
+        <p>
+         <b>davidbyron.info</b> - Custom-built personal website for myself. (<a href="#">you are here</a>)
+        </p>
+        <p>
+         <b>andreschwab.com</b> - Custom-built personal website for Andre Schwab. (<a href="https://www.andreschwab.com/">link</a>)
+        </p>
         <!-- ACADEMICS -->
-        <span class="subtitle">Academics</span>
-        <br>
-        <b>Extraction from Conjuncts in Khoekhoe: An Argument for Cyclic Linearization</b> - In
-        this thesis, I tackle a violation of the otherwise highly robust Coordinate Structure Constraint,
-        so-called “SLF-coordination”, that has yet to be fully understood. I argue that the cyclic
-        linearization approach to the locality of movement makes it possible to account for this
-        puzzling phenomenon as it manifests in the Khoisan language Khoekhoe. (<a href="./thesis.pdf">link</a>)
-        <br>
-        <br>
-        <b>Grammatical Sketch of |Xam</b> - A webpage outlining the syntactic properties of |Xam, a
-        now extinct Khoisan language. (<a href="https://sites.google.com/site/thekhoisanlanguages/tuu/xam">link</a>)
-      </div>
+        <h3>Academics</h3>
+        <p>
+         <b>Extraction from Conjuncts in Khoekhoe: An Argument for Cyclic Linearization</b> - In
+         this thesis, I tackle a violation of the otherwise highly robust Coordinate Structure Constraint,
+         so-called “SLF-coordination”, that has yet to be fully understood. I argue that the cyclic
+         linearization approach to the locality of movement makes it possible to account for this
+         puzzling phenomenon as it manifests in the Khoisan language Khoekhoe. (<a href="./thesis.pdf">link</a>)
+        </p>
+        <p>
+         <b>Grammatical Sketch of |Xam</b> - A webpage outlining the syntactic properties of |Xam, a
+         now extinct Khoisan language. (<a href="https://sites.google.com/site/thekhoisanlanguages/tuu/xam">link</a>)
+        </p>
+      </section>
       <div class="separator"></div>
       <!-- GALLERY -->
-      <div class="gallery">
-        <div class="section"><b>GALLERY</b></div>
+      <section class="gallery">
+        <h2>GALLERY</h2>
         <div class="slideshow" id="slideshow" onmouseenter="showImgUI()" onmouseleave="removeImgUI()">
           <a class="prev" id="prev" onclick="changeSlides(-1)">&#10094;</a>
 
@@ -842,7 +815,7 @@
           <a class="next" id="next" onclick="changeSlides(1)">&#10095;</a>
         </div>
         <div id="picDescription"></div>
-      </div>
+      </section>
     </div>
   </body>
 </html>
