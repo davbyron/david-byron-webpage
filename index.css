@@ -197,7 +197,7 @@ header {
     100% { transform: rotate(-337.5deg); }
 }
 
-.comp_linguist {
+.developer {
   /* inkscape: text size 80 */
   position: absolute;
   height: 85%;
@@ -216,7 +216,7 @@ header {
     100% { transform: rotate(-270deg); }
 }
 
-.visual_artist {
+.visual-artist {
   /* inkscape text size 80 */
   position: absolute;
   height: 85%;
