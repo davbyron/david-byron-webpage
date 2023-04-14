@@ -32,18 +32,6 @@ const getOffset = (element, side) => {
   return offset;
 }
 
-// createClickHandler() creates a click event on the specified
-// element that scrolls to a specific location on the webpage.
-function createClickHandler(element, down, over) {
-  element.onclick = () => {
-    document.documentElement.scroll({
-      top: down,
-      left: over,
-      behavior: 'smooth'
-    });
-  };
-}
-
 const slideTitles = ['Flowers at Home, 2012',
                     'Fair Ride, 2013',
                     'Carrick-a-Rede, 2014',
@@ -93,14 +81,6 @@ const showSlides = (n) => {
   document.getElementById('picDescription').innerHTML = text;
   // Set padding left offset to the (parent width - img width) / 2
   document.getElementById('picDescription').style.paddingLeft = ((document.getElementById('slideshow').clientWidth - currentSlide.childNodes[1].clientWidth) / 2.0).toString() + 'px'
-
-  console.log('Slideshow width:')
-  console.log(document.getElementById('slideshow').clientWidth);
-  console.log('Pic width:');
-  console.log(slides[slideIndex-1].childNodes[1]);
-  console.log(slides[slideIndex-1].childNodes[1].clientWidth);
-  console.log('New offset?:');
-  console.log(((document.getElementById('slideshow').clientWidth - currentSlide.childNodes[1].clientWidth) / 2.0).toString() + "px");
 }
 
 let slideIndex = Math.floor(Math.random() * slideTitles.length); // make this random
@@ -116,21 +96,26 @@ const changeSlides = (n) => {
 const showImgUI = () => {
   document.getElementById('prev').style.display = 'flex';
   document.getElementById('next').style.display = 'flex';
-  // document.getElementById('picDescription').style.display = 'flex';
 }
 
 const removeImgUI = () => {
   document.getElementById('prev').style.display = 'none';
   document.getElementById('next').style.display = 'none';
-  // document.getElementById('picDescription').style.display = 'none';
 }
 
-const scrollButton = document.getElementById('scroll');
-const header = document.getElementById('header');
+// Get elements
+const scrollButton = document.querySelector('.scroll-button');
+const header = document.querySelector('header');
 const aboutSection = document.getElementById('about');
 
-const aboutTop = getOffset(aboutSection, 'top');
-// const bodyTop = getOffset(document.body, 'top');
+const aboutTop = getOffset(aboutSection, 'top'); // Top of page to "About" section
+const translateDist = aboutTop - vhToPx(1); // How far to scroll
 
-createClickHandler(scrollButton, (aboutTop - vhToPx(1)), 0);
-createClickHandler(header, (aboutTop - vhToPx(1)), 0);
+// Event listeners
+scrollButton.onclick = () => {
+  document.documentElement.scroll({
+    top: translateDist,
+    left: 0,
+    behavior: 'smooth'
+  });
+};

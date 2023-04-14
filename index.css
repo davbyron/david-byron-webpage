@@ -46,6 +46,11 @@ header {
   border-radius: 100%;
 }
 
+svg {
+  position: relative;
+  z-index: 1;
+}
+
 .myname-bold-bottom-right {
   position: absolute;
   height: 100%;
@@ -254,19 +259,47 @@ header {
     100% { transform: rotate(0); }
 }
 
-.scroll {
+.scroll-button-container {
+  position: relative;
   margin: 0 auto;
-  color: black;
-  z-index: 1;
+  line-height: 0%;
+  z-index: 2;
 }
 
-.scroll:hover {
+.scroll-button {
+  all: unset;
+  border-radius: 100%;
+  color: black;
+  transition: background-color 0.5s ease;
   cursor: pointer;
 }
 
-.scroll span {
+.scroll-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.scroll-button:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.scroll-button:hover span {
+  animation: 1s ease 1 moveDown;
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.scroll-button span {
   font-size: 3.5em;
-  margin: 0 auto;
 }
 
 .separator {
