@@ -319,16 +319,13 @@ h2 {
   margin: 1em 0 0.3em 0;
 }
 
-.fab, .fas {
+.fa-solid, .fa-brands {
   font-size: 3em;
   color: #ea3501;
-}
-
-.fab:hover, .fas:hover {
   cursor: pointer;
 }
 
-.fa-github-square, .fa-linkedin, .fa-instagram-square {
+.fa-brands {
   padding-left: 0.05em;
 }
 
