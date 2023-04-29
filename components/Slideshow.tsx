@@ -59,11 +59,10 @@ function Slideshow(props: slideshowPropType) {
         </button>
         <figure className={styles.slideContainer}>
           <div className={styles.slide}>
-            <Image
+            <img
               src={`/gallery/${category}/${images[currentImageId].file}`}
               alt={images[currentImageId].title}
               className={styles.slideshowImg}
-              fill
             />
           </div>
           <figcaption className={styles.slideText}>
