@@ -1,0 +1,5 @@
+.DS_Store
+.next/
+.vscode/
+*.git/
+node_modules/

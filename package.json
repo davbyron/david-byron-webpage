@@ -1,0 +1,38 @@
+{
+  "name": "david-byron-webpage",
+  "version": "1.0.0",
+  "description": "A personal webpage for David Byron.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
+    "build": "next build",
+    "prod": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davbyron/davbyron.github.io.git"
+  },
+  "author": "David Byron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davbyron/davbyron.github.io/issues"
+  },
+  "homepage": "https://davidbyron.info",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/free-regular-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "next": "^13.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.35",
+    "typescript": "5.0.4"
+  }
+}

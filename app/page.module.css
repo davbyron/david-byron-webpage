@@ -1,0 +1,269 @@
+.onOpen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90vh;
+}
+
+.revolvingText {
+  position: relative;
+  width: 75vh;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: calc(25% - 1px);
+  left: calc(25% - 1px);
+  height: 50%;
+  width: 50%;
+}
+
+.faceContainer {
+  width: 100%;
+  padding-bottom: 100%;
+  background-image: url('../public/myface.jpeg');
+  background-repeat: no-repeat;
+  background-size: 175%;
+  background-position: 51.5% 52.5%;
+  border-radius: 100%;
+}
+
+.myName {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: -1px;
+  left: -1px;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.myName1 {
+  transform: rotate(67.5deg);
+  animation-name: rotate1;
+  animation-duration: 30s;
+}
+
+.myName2 {
+  transform: rotate(112.5deg);
+  animation-name: rotate2;
+  animation-duration: 19s;
+  opacity: 10%;
+}
+
+.myName3 {
+  transform: rotate(157.5deg);
+  animation-name: rotate3;
+  animation-duration: 20s;
+  opacity: 10%;
+}
+
+.myName4 {
+  transform: rotate(202.5deg);
+  animation-name: rotate4;
+  animation-duration: 18s;
+  opacity: 2.5%;
+}
+
+.myName5 {
+  transform: rotate(247.5deg);
+  animation-name: rotate5;
+  animation-duration: 22s;
+  opacity: 5%;
+}
+
+.myName6 {
+  transform: rotate(292.5deg);
+  animation-name: rotate6;
+  animation-duration: 21s;
+  opacity: 5%;
+}
+
+.myName7 {
+  transform: rotate(337.5deg);
+  animation-name: rotate7;
+  animation-duration: 19s;
+  opacity: 2.5%;
+}
+
+.myName8 {
+  transform: rotate(22.5deg);
+  animation-name: rotate8;
+  animation-duration: 19s;
+  opacity: 2.5%;
+}
+
+.developer {
+  /* inkscape: text size 80 */
+  position: absolute;
+  height: 85%;
+  width: 85%;
+  top: calc(7.5% - 1px);
+  left: calc(7.5% - 1px);
+  transform: rotate(90deg);
+  animation-name: reverse-rotate-dev;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.visualArtist {
+  /* inkscape text size 80 */
+  position: absolute;
+  height: 85%;
+  width: 85%;
+  top: calc(7.5% - 1px);
+  left: calc(7.5% - 1px);
+  animation-name: reverse-rotate-viz;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.scrollButtonContainer {
+  position: relative;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.scrollButton {
+  display: block;
+  padding: 10px;
+  border-radius: 100%;
+  color: black;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+}
+
+.scrollButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.scrollButton:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.scrollButton:hover svg {
+  animation: 1s ease 1 moveDown;
+}
+
+.scrollButton span {
+  font-size: 3.5em;
+}
+
+.separator {
+  height: 5vh;
+}
+
+.onScroll {
+  width: 75%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.aboutLink {
+  font-size: 3em;
+  color: #ea3501;
+  cursor: pointer;
+}
+
+.aboutLinkSite {
+  padding-left: 0.05em;
+}
+
+.gallerySubheader {
+  margin-bottom: 20px;
+}
+
+
+/* DYNAMIC LAYOUT */
+
+@media all and (max-width: 750px) {
+  .prev, .next {
+    font-size: 2em;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .section, .fab, .fas {
+    font-size: 2.5em;
+  }
+
+  .subtitle {
+    font-size: 1.25em;
+  }
+}
+
+@media all and (min-width: 501px) and (max-width: 750px) {
+  /* Make scroll arrow smaller for these widths */
+  .scroll span {
+    font-size: 2em;
+  }
+}
+
+
+/* KEYFRAMES */
+
+@keyframes rotate1 {
+  0%{ transform: rotate(67.5deg); }
+  100% { transform: rotate(-292.5deg); }
+}
+
+@keyframes rotate2 {
+0%{ transform: rotate(112.5deg); }
+100% { transform: rotate(-247.5deg); }
+}
+
+@keyframes rotate3 {
+0%{ transform: rotate(157.5deg); }
+100% { transform: rotate(-202.5deg); }
+}
+
+@keyframes rotate4 {
+0%{ transform: rotate(202.5deg); }
+100% { transform: rotate(-157.5deg); }
+}
+
+@keyframes rotate5 {
+0%{ transform: rotate(247.5deg); }
+100% { transform: rotate(-112.5deg); }
+}
+
+@keyframes rotate6 {
+0%{ transform: rotate(292.5deg); }
+100% { transform: rotate(-67.5deg); }
+}
+
+@keyframes rotate7 {
+0%{ transform: rotate(337.5deg); }
+100% { transform: rotate(-22.5deg); }
+}
+
+@keyframes rotate8 {
+0%{ transform: rotate(22.5deg); }
+100% { transform: rotate(-337.5deg); }
+}
+
+@keyframes reverse-rotate-dev {
+  0%{ transform: rotate(90deg); }
+  100% { transform: rotate(-270deg); }
+}
+
+@keyframes reverse-rotate-viz {
+    0%{ transform: rotate(360deg); }
+    100% { transform: rotate(0); }
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
