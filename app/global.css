@@ -1,0 +1,54 @@
+body {
+  margin: 5vh 10vw;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.15em;
+  background-color: #f2efe9;
+  color: #252627;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 75vh;
+}
+
+svg {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+a {
+  color: #ea3501;
+}
+
+section {
+  margin-top: 5vh;
+}
+
+h2 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 3em;
+  color: black;
+  padding-top: 0.5em;
+  margin: 0.5em 0 0.3em 0;
+}
+
+h3 {
+  margin: 0;
+  font-weight: 400;
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.5em;
+  color: #ea3501;
+  text-shadow: 0 0 3px rgba(234, 51, 1, 0.5);
+  text-transform: uppercase;
+}
+
+@media all and (max-width: 500px) {
+  body {
+    margin: 5vh 2.5vw;
+    font-size: 0.85em;
+  }
+}
