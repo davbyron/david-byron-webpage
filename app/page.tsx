@@ -58,11 +58,12 @@ function HomePage() {
       <div className={styles.onScroll}>
         <section className={styles.about} id="about">
           <h2>ABOUT</h2>
-          <p>Nice to meet you on the web! I'm David, an Artist and Software Engineer at <a href="https://www.lymba.com/">Lymba</a>.</p>
+          <p>Nice to meet you on the web! I'm David, an Artist and Developer.</p>
 
-          <p>At Lymba, I work primarily on developing web apps integrated with NLP tools and knowledge graphs. My day-to-day can really vary,
-          but I'm often responsible for UI/UX design, building and maintaining customer-facing applications, ontology building, creating NLP resources,
-          maintaining RESTful Python APIs, client demos, documentation writing, and quality assurance testing.</p>
+          <p>In my most recent position as a Software Engineer at <a href="https://www.lymba.com/">Lymba</a>, I worked primarily on developing web apps integrated
+          with NLP tools and knowledge graphs. My day-to-day really varied, but I was often responsible for UI/UX design, building
+          and maintaining customer-facing applications, ontology building, creating NLP resources, maintaining RESTful Python APIs,
+          client demos, documentation writing, and quality assurance testing.</p>
 
           <p>Recently, I've found myself trying to mesh my more recent aptitude for computer science with my
           lifelong love for art. As a result, I have been increasingly drawn towards web development and UI/UX design,
@@ -77,10 +78,7 @@ function HomePage() {
           in Khoekhoe: An Argument for Cyclic Linearization</a></cite> advised by Erik Zyman
           at the University of Chicago</p>
 
-          <p>Outside of work, I'm a huge cooking fanatic. Having worked my way through the restaurant
-          industry up to a front of house position in a Michelin-starred brewpub, I've
-          come to learn a lot of new and thoughtful ways to prepare food and drinks. Other than this,
-          I spend a lot of time cycling, gardening, playing video games, making art of all kinds, and at drag events.</p>
+          <p>Outside of work, I spend a lot of time cycling, gardening, playing video games, making art of all kinds, and at drag events.</p>
 
           <a href="mailto:davbyron@icloud.com"><FontAwesomeIcon icon={faSquareEnvelope} className={styles.aboutLink} /></a>
           <a href="https://github.com/davbyron"><FontAwesomeIcon icon={faGithubSquare} className={`${styles.aboutLink} ${styles.aboutLinkSite}`} /></a>
