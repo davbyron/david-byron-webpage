@@ -1,5 +1,4 @@
 import React, { useState, useEffect, SyntheticEvent } from 'react'
-import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 

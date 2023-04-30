@@ -164,18 +164,17 @@
   text-align: justify;
 }
 
-.aboutLink {
-  font-size: 3em;
-  color: #ea3501;
-  cursor: pointer;
-}
-
 .aboutLinkSite {
   padding-left: 0.05em;
 }
 
 .gallerySubheader {
   margin-bottom: 20px;
+}
+
+.aboutLink {
+  font-size: 3em;
+  cursor: pointer;
 }
 
 
