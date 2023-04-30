@@ -34,21 +34,26 @@ function Slideshow(props: slideshowPropType) {
     const direction = event.currentTarget.id
     const numImages = images.length - 1
 
-    if (direction === 'next') {
-      if (currentImageId === numImages) {
-        setCurrentImageId(0)
-      } else {
-        setCurrentImageId(currentImageId + 1)
+    // Set timeout to same time as svg transition in CSS.
+    // Otherwise, component re-renders, causing an interruption
+    // in the transition.
+    setTimeout(() => {
+      if (direction === 'next') {
+        if (currentImageId === numImages) {
+          setCurrentImageId(0)
+        } else {
+          setCurrentImageId(currentImageId + 1)
+        }
       }
-    }
-
-    if (direction === 'prev') {
-      if (currentImageId === 0) {
-        setCurrentImageId(numImages)
-      } else {
-        setCurrentImageId(currentImageId - 1)
+  
+      if (direction === 'prev') {
+        if (currentImageId === 0) {
+          setCurrentImageId(numImages)
+        } else {
+          setCurrentImageId(currentImageId - 1)
+        }
       }
-    }
+    }, 100)
   }
 
   return (
