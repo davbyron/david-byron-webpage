@@ -8,6 +8,7 @@
 .revolvingText {
   position: relative;
   width: 75vh;
+  overflow: hidden;
 }
 
 .face {
