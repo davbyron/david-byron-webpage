@@ -77,7 +77,6 @@ function Slideshow(props: slideshowPropType) {
           <FontAwesomeIcon icon={faChevronRight} size="sm" className={styles.slideshowNav} />
         </button>
       </div>
-      <div id="picDescription"></div>
     </div>
   )
 }

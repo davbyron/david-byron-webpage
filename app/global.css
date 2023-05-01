@@ -77,3 +77,9 @@ footer address {
     font-size: 0.85em;
   }
 }
+
+@media all and (max-width: 600px) {
+  figure {
+    margin: 0;
+  }
+}
