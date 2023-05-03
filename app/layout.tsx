@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import './global.css'
 import type { Metadata } from 'next';
 import { config } from '@fortawesome/fontawesome-svg-core'
@@ -24,7 +26,28 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Dosis&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
       </head>
-      <body>{children}</body>
+      <body>
+        <nav>
+          <ul>
+            <li>
+              HOME
+            </li>
+            <li>
+              GALLERY
+            </li>
+            <li>
+              SHOP
+            </li>
+            <li>
+              BLOG
+            </li>
+            <li>
+              ABOUT
+            </li>
+          </ul>
+        </nav>
+        {children}
+      </body>
     </html>
   );
 }
