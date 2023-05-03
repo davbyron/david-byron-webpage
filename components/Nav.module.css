@@ -1,0 +1,46 @@
+#galleryNav {
+  position: relative;
+}
+
+#galleryNav a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#galleryNav:hover #galleryList {
+  visibility: visible;
+  padding-left: 15px;
+  opacity: 1;
+}
+
+#galleryList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  margin-top: 10px;
+  padding-left: 0;
+  padding-bottom: 20px;
+  height: auto;
+  width: 50vw;
+  max-width: 200px;
+  font-family: 'Dosis', sans-serif;
+  text-shadow: 0 0 2px rgba(234, 51, 1, 0.5);
+  opacity: 0;
+  visibility: collapse;
+  background-color: rgba(242, 239, 233, 0.85);
+  backdrop-filter: blur(10px);
+  transition: 1s ease;
+  z-index: 5;
+}
+
+#galleryList:hover {
+  opacity: 1;
+  padding-left: 15px;
+}
+
+#galleryList li {
+  width: 100%;
+  cursor: pointer;
+}

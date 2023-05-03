@@ -17,6 +17,7 @@ import visualArtist from '../public/SVGs/visual_artist.svg'
 import imagesJson from '../public/gallery/images.json'
 
 import styles from './page.module.css';
+import Nav from '../components/Nav';
 
 function HomePage() {
   function handleScroll(event: SyntheticEvent) {
@@ -34,6 +35,7 @@ function HomePage() {
 
   return (
     <>
+      <Nav activePath='/' />
       <div className={styles.onOpen}>
         <header>
           <div className={styles.revolvingText}>
