@@ -1,7 +1,13 @@
-import './global.css'
 import type { Metadata } from 'next';
+
 import { config } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSquareEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGithubSquare, faLinkedin, faInstagramSquare } from '@fortawesome/free-brands-svg-icons'
+
+import './global.css'
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import styles from './page.module.css'
 
 config.autoAddCss = false
 
@@ -26,6 +32,15 @@ export default function RootLayout({
       </head>
       <body>
         {children}
+        <footer>
+          <address>
+            <a href="mailto:davbyron@icloud.com"><FontAwesomeIcon icon={faSquareEnvelope} className={styles.aboutLink} /></a>
+            <a href="https://github.com/davbyron"><FontAwesomeIcon icon={faGithubSquare} className={`${styles.aboutLink} ${styles.aboutLinkSite}`} /></a>
+            <a href="https://www.linkedin.com/in/david-byron-62a56b77/"><FontAwesomeIcon icon={faLinkedin} className={`${styles.aboutLink} ${styles.aboutLinkSite}`} /></a>
+            <a href="https://www.instagram.com/bavdyron/"><FontAwesomeIcon icon={faInstagramSquare} className={`${styles.aboutLink} ${styles.aboutLinkSite}`} /></a>
+          </address>
+          <p>Copyright © 2023 David Byron</p>
+      </footer>
       </body>
     </html>
   );
