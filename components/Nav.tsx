@@ -12,7 +12,7 @@ type NavProps = {
   activePath: string
 }
 
-function Nav(props) {
+function Nav(props: NavProps) {
   const { activePath } = props
 
   return (
@@ -44,9 +44,9 @@ function Nav(props) {
             </li>
           </ul>
         </li>
-        <li>
+        {/* <li>
           <Link href="/shop" className={activePath === '/shop' ? 'active' : ''}>SHOP</Link>
-        </li>
+        </li> */}
         <li>
           <Link href="/blog" className={activePath === '/blog' ? 'active' : ''}>BLOG</Link>
         </li>

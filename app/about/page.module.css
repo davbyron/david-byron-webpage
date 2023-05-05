@@ -119,8 +119,6 @@
 }
 
 #about {
-  /* flex: 5 0; */
-  max-width: 80ch;
   text-align: justify;
 }
 
