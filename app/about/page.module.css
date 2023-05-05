@@ -1,0 +1,177 @@
+.revolvingText {
+  position: relative;
+  margin: 30px auto 0;
+  width: 50%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: calc(30% - 1px);
+  left: calc(30% - 1px);
+  height: 40%;
+  width: 40%;
+}
+
+.faceContainer {
+  width: 100%;
+  padding-bottom: 100%;
+  background-image: url('../../public/myface.jpeg');
+  background-repeat: no-repeat;
+  background-size: 175%;
+  background-position: 51.5% 52.5%;
+  border-radius: 100%;
+}
+
+.myName {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: -1px;
+  left: -1px;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.myName1 {
+  transform: rotate(67.5deg);
+  animation-name: rotate1;
+  animation-duration: 30s;
+}
+
+.myName2 {
+  transform: rotate(112.5deg);
+  animation-name: rotate2;
+  animation-duration: 19s;
+  opacity: 10%;
+}
+
+.myName3 {
+  transform: rotate(157.5deg);
+  animation-name: rotate3;
+  animation-duration: 20s;
+  opacity: 10%;
+}
+
+.myName4 {
+  transform: rotate(202.5deg);
+  animation-name: rotate4;
+  animation-duration: 18s;
+  opacity: 2.5%;
+}
+
+.myName5 {
+  transform: rotate(247.5deg);
+  animation-name: rotate5;
+  animation-duration: 22s;
+  opacity: 5%;
+}
+
+.myName6 {
+  transform: rotate(292.5deg);
+  animation-name: rotate6;
+  animation-duration: 21s;
+  opacity: 5%;
+}
+
+.myName7 {
+  transform: rotate(337.5deg);
+  animation-name: rotate7;
+  animation-duration: 19s;
+  opacity: 2.5%;
+}
+
+.myName8 {
+  transform: rotate(22.5deg);
+  animation-name: rotate8;
+  animation-duration: 19s;
+  opacity: 2.5%;
+}
+
+.developer {
+  /* inkscape: text size 80 */
+  position: absolute;
+  height: 85%;
+  width: 85%;
+  top: calc(7.5% - 1px);
+  left: calc(7.5% - 1px);
+  transform: rotate(90deg);
+  animation-name: reverse-rotate-dev;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.visualArtist {
+  /* inkscape text size 80 */
+  position: absolute;
+  height: 85%;
+  width: 85%;
+  top: calc(7.5% - 1px);
+  left: calc(7.5% - 1px);
+  animation-name: reverse-rotate-viz;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#about {
+  /* flex: 5 0; */
+  max-width: 80ch;
+  text-align: justify;
+}
+
+/* KEYFRAMES */
+
+@keyframes rotate1 {
+  0%{ transform: rotate(67.5deg); }
+  100% { transform: rotate(-292.5deg); }
+}
+
+@keyframes rotate2 {
+0%{ transform: rotate(112.5deg); }
+100% { transform: rotate(-247.5deg); }
+}
+
+@keyframes rotate3 {
+0%{ transform: rotate(157.5deg); }
+100% { transform: rotate(-202.5deg); }
+}
+
+@keyframes rotate4 {
+0%{ transform: rotate(202.5deg); }
+100% { transform: rotate(-157.5deg); }
+}
+
+@keyframes rotate5 {
+0%{ transform: rotate(247.5deg); }
+100% { transform: rotate(-112.5deg); }
+}
+
+@keyframes rotate6 {
+0%{ transform: rotate(292.5deg); }
+100% { transform: rotate(-67.5deg); }
+}
+
+@keyframes rotate7 {
+0%{ transform: rotate(337.5deg); }
+100% { transform: rotate(-22.5deg); }
+}
+
+@keyframes rotate8 {
+0%{ transform: rotate(22.5deg); }
+100% { transform: rotate(-337.5deg); }
+}
+
+@keyframes reverse-rotate-dev {
+  0%{ transform: rotate(90deg); }
+  100% { transform: rotate(-270deg); }
+}
+
+@keyframes reverse-rotate-viz {
+    0%{ transform: rotate(360deg); }
+    100% { transform: rotate(0); }
+}

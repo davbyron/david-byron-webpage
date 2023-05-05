@@ -33,6 +33,13 @@ header {
   height: 75vh;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 500px;
+}
+
 svg {
   display: block;
   position: relative;
@@ -49,16 +56,12 @@ a.active {
   text-shadow: none !important;
 }
 
-section {
-  margin-top: 5vh;
-}
-
 h2 {
   font-family: 'Archivo Black', sans-serif;
   font-size: 3em;
   color: black;
-  padding-top: 0.5em;
-  margin: 0.5em 0 0.3em 0;
+  /* padding-top: 0.5em; */
+  margin: 0 0 0.3em 0;
 }
 
 h3 {
