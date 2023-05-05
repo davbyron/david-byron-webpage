@@ -1,6 +1,6 @@
 import React, { useState, useEffect, SyntheticEvent } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight, faChevronLeft, faXmark } from '@fortawesome/free-solid-svg-icons'
 
 import styles from './Slideshow.module.css'
 
@@ -13,16 +13,18 @@ type imageType = {
 type slideshowPropType = {
   category: string
   images: imageType[]
+  startingImage: imageType
+  closeSlideshow?: () => void
 }
 
 function Slideshow(props: slideshowPropType) {
-  const { category, images } = props;
+  const { category, images, startingImage, closeSlideshow } = props;
 
   const [currentImageId, setCurrentImageId] = useState(0);
 
   useEffect(() => {
-    // Set random image as current image
-    setCurrentImageId(Math.floor(Math.random() * images.length))
+    const startingImageId = images.indexOf(startingImage)
+    setCurrentImageId(startingImageId)
   }, [])
 
   /**
@@ -56,27 +58,28 @@ function Slideshow(props: slideshowPropType) {
   }
 
   return (
-    <div className="slideshow-container">
-      <div className={styles.slideshow} id="slideshow">
-        <button className={styles.prev} id="prev" onClick={changeSlides}>
-          <FontAwesomeIcon icon={faChevronLeft} size="sm" className={styles.slideshowNav} />
-        </button>
-        <figure className={styles.slideContainer}>
-          <div className={styles.slide}>
-            <img
-              src={`/gallery/${category}/${images[currentImageId].file}`}
-              alt={images[currentImageId].title}
-              className={styles.slideshowImg}
-            />
-          </div>
-          <figcaption className={styles.slideText}>
-            {images[currentImageId].title}, {images[currentImageId].date}
-          </figcaption>
-        </figure>
-        <button className={styles.next} id="next" onClick={changeSlides}>
-          <FontAwesomeIcon icon={faChevronRight} size="sm" className={styles.slideshowNav} />
-        </button>
-      </div>
+    <div className={styles.slideshow} id="slideshow">
+      <button className={styles.prev} id="prev" onClick={changeSlides}>
+        <FontAwesomeIcon icon={faChevronLeft} size="sm" className={styles.slideshowNav} />
+      </button>
+      <figure className={styles.slideContainer}>
+        <div className={styles.slide}>
+          <img
+            src={`/gallery/${category}/${images[currentImageId].file}`}
+            alt={images[currentImageId].title}
+            className={styles.slideshowImg}
+          />
+        </div>
+        <figcaption className={styles.slideText}>
+          {images[currentImageId].title}, {images[currentImageId].date}
+        </figcaption>
+      </figure>
+      <button className={styles.next} id="next" onClick={changeSlides}>
+        <FontAwesomeIcon icon={faChevronRight} size="sm" className={styles.slideshowNav} />
+      </button>
+      <button className={styles.closeButton}>
+        <FontAwesomeIcon icon={faXmark} size="sm" onClick={closeSlideshow} />
+      </button>
     </div>
   )
 }
