@@ -1,6 +1,12 @@
 'use client'
 
-import React, { KeyboardEvent, MouseEvent, useCallback, useState } from 'react'
+import React, {
+  KeyboardEvent,
+  MouseEvent,
+  useCallback,
+  useState
+} from 'react'
+import Masonry from '@mui/lab/Masonry'
 import Slideshow from './Slideshow'
 
 import imagesJson from '../public/gallery/images.json'
@@ -58,17 +64,21 @@ function PhotoGallery(props: galleryPropsType) {
           closeSlideshow={handleSlideshowClose}
         />
       )}
-      {!selectedImage && images.map((img: imageType) => (
-        <img
-          src={`/gallery/${category}/${img.file}`}
-          alt={img.title}
-          className={styles.galleryImg}
-          onClick={handleImageClick}
-          tabIndex={0}
-          onKeyDown={handleKeyDown}
-          key={img.title}
-        />
-      ))}
+      {!selectedImage &&
+      <Masonry columns={4} spacing={2}>
+        {images.map((img: imageType) => (
+          <img
+            src={`/gallery/${category}/${img.file}`}
+            alt={img.title}
+            className={styles.galleryImg}
+            onClick={handleImageClick}
+            tabIndex={0}
+            onKeyDown={handleKeyDown}
+            key={img.title}
+          />
+        ))}
+      </Masonry>
+      }
     </div>
   )
 }
