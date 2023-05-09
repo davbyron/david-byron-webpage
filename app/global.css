@@ -79,6 +79,14 @@ h3 {
   text-transform: uppercase;
 }
 
+h4 {
+  margin: 20px 0 0 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: black;
+}
+
 footer {
   margin-top: 50px;
   margin-left: auto;
@@ -99,7 +107,7 @@ footer address {
   gap: 10px;
 }
 
- footer p {
+footer p {
   margin: 0;
   font-size: 12px;
 }
