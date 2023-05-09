@@ -10,12 +10,17 @@
   cursor: pointer;
   box-shadow: none;
   transition: 0.5s ease;
+  z-index: 1;
 }
 
 .galleryImg:hover {
-  box-shadow: 0 0 5px rgba(234, 51, 1, 0.5);
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.05);
+  transform: scale(1.5);
+  z-index: 2;
 }
 
 .galleryImg:active {
   box-shadow: none;
+  transform: scale(1);
+  z-index: 1;
 }
