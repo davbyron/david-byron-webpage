@@ -97,37 +97,6 @@
   animation-timing-function: linear;
 }
 
-.scrollButtonContainer {
-  position: relative;
-  margin: 0 auto;
-  z-index: 2;
-}
-
-.scrollButton {
-  display: block;
-  padding: 10px;
-  border-radius: 100%;
-  color: black;
-  transition: background-color 0.5s ease;
-  cursor: pointer;
-}
-
-.scrollButton:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.scrollButton:active {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.scrollButton:hover svg {
-  animation: 1s ease 1 moveDown;
-}
-
-.scrollButton span {
-  font-size: 3.5em;
-}
-
 .separator {
   height: 5vh;
 }
@@ -228,16 +197,4 @@
 @keyframes reverse-rotate-viz {
     0%{ transform: rotate(360deg); }
     100% { transform: rotate(0); }
-}
-
-@keyframes moveDown {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
 }

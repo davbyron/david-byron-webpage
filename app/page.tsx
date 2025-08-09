@@ -1,7 +1,6 @@
 'use client'
 
-import React, { SyntheticEvent } from 'react';
-import Link from 'next/link';
+import React, { useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faSquareEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGithubSquare, faLinkedin, faInstagramSquare } from '@fortawesome/free-brands-svg-icons'
@@ -19,16 +18,14 @@ import imagesJson from '../public/gallery/images.json'
 import styles from './page.module.css';
 
 function HomePage() {
-  function handleScroll(event: SyntheticEvent) {
-    event.preventDefault()
+  const aboutSectionRef = useRef<HTMLDivElement>(null);
 
-    const scrollToId = event.currentTarget.getAttribute('href')
-    if (typeof scrollToId === 'string') { // i.e., not null
-      const scrollToElement = document.querySelector(scrollToId);
-
-      scrollToElement?.scrollIntoView({
-        behavior: 'smooth'
-      })
+  function handleScroll() {
+    if (aboutSectionRef.current) {
+      aboutSectionRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     }
   }
 
@@ -64,14 +61,19 @@ function HomePage() {
             <Image src={visualArtist} className={styles.visualArtist} alt="Visual artist" />
           </div>
         </header>
-        <div className={styles.scrollButtonContainer}>
-          <Link href="#about" onClick={handleScroll} className={styles.scrollButton} id="scroll-button">
-              <FontAwesomeIcon icon={faChevronDown} size="2x" />
-          </Link>
+        <div className="relative mx-auto z-10">
+          <button
+            type="button"
+            id="scroll-button"
+            onClick={handleScroll}
+            className="group p-2 rounded-full transition-colors duration-500 ease cursor-pointer hover:bg-black/5 active:bg-black/10"
+          >
+            <FontAwesomeIcon icon={faChevronDown} size="2x" className="group-hover:animate-move-down" />
+          </button>
         </div>
       </div>
       <div className={styles.onScroll}>
-        <section className={styles.about} id="about">
+        <section className={styles.about} id="about" ref={aboutSectionRef}>
           <h2>ABOUT</h2>
           <p>Nice to meet you on the web! I'm David, an Artist and Developer.</p>
 

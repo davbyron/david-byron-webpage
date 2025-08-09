@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+@theme {
+  --animate-move-down: move-down 1s ease;
+  @keyframes move-down {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
+
 body {
   margin: 5vh 10vw 0vh; /* top | left/right | bottom */
   font-family: 'Roboto', sans-serif;
