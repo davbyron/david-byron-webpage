@@ -51,7 +51,14 @@ function HomePage() {
             {[...Array(8).keys()].map((num) => {
               const className = `myName${num + 1}`
 
-              return <Image src={myName} className={`${styles.myName} ${styles[className]}`} alt="David Byron" />
+              return (
+                <Image
+                  key={className}
+                  src={myName}
+                  className={`${styles.myName} ${styles[className]}`}
+                  alt="David Byron"
+                />
+              )
             })}
             <Image src={developer} className={styles.developer} alt="Developer" />
             <Image src={visualArtist} className={styles.visualArtist} alt="Visual artist" />
