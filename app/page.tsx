@@ -36,9 +36,17 @@ function HomePage() {
     <>
       <div className={styles.onOpen}>
         <header>
-          <div className={styles.revolvingText}>
-            <div className={styles.face}>
-              <div className={styles.faceContainer}></div>
+          <div className="relative w-[75vh] overflow-hidden">
+            <div className="flex items-center absolute size-1/2 top-1/4 left-1/4">
+              <div className="relative w-full aspect-square rounded-full overflow-hidden">
+                <Image
+                  src="/myface.jpeg"
+                  alt="My face"
+                  fill
+                  className="object-cover scale-175 -translate-x-1"
+                  priority
+                />
+              </div>
             </div>
             {[...Array(8).keys()].map((num) => {
               const className = `myName${num + 1}`

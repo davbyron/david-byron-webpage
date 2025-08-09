@@ -5,32 +5,6 @@
   height: 90vh;
 }
 
-.revolvingText {
-  position: relative;
-  width: 75vh;
-  overflow: hidden;
-}
-
-.face {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top: calc(25% - 1px);
-  left: calc(25% - 1px);
-  height: 50%;
-  width: 50%;
-}
-
-.faceContainer {
-  width: 100%;
-  padding-bottom: 100%;
-  background-image: url('../public/myface.jpeg');
-  background-repeat: no-repeat;
-  background-size: 175%;
-  background-position: 51.5% 52.5%;
-  border-radius: 100%;
-}
-
 .myName {
   position: absolute;
   height: 100%;
