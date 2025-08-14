@@ -90,19 +90,6 @@
   animation-timing-function: linear;
 }
 
-.aboutLinkSite {
-  padding-left: 0.05em;
-}
-
-.gallerySubheader {
-  margin-bottom: 20px;
-}
-
-.aboutLink {
-  font-size: 3em;
-  cursor: pointer;
-}
-
 
 /* DYNAMIC LAYOUT */
 

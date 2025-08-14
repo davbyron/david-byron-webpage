@@ -129,20 +129,20 @@ function HomePage() {
             </p>
           </div>
         </section>
-        <section className={styles.gallery}>
+        <section>
           <h2>GALLERY</h2>
-          <h3 className={styles.gallerySubheader}>Ceramics</h3>
+          <h3 className="mb-4">Ceramics</h3>
           <Slideshow images={imagesJson["ceramics"]} category='ceramics' />
-          <h3 className={styles.gallerySubheader}>Photography</h3>
+          <h3 className="mb-4">Photography</h3>
           <Slideshow images={imagesJson["photography"]} category='photography' />
         </section>
       </div>
       <footer>
-        <address>
-          <a href="mailto:davbyron@icloud.com"><FontAwesomeIcon icon={faSquareEnvelope} className={styles.aboutLink} /></a>
-          <a href="https://github.com/davbyron"><FontAwesomeIcon icon={faGithubSquare} className={`${styles.aboutLink} ${styles.aboutLinkSite}`} /></a>
-          <a href="https://www.linkedin.com/in/david-byron-62a56b77/"><FontAwesomeIcon icon={faLinkedin} className={`${styles.aboutLink} ${styles.aboutLinkSite}`} /></a>
-          <a href="https://www.instagram.com/bavdyron/"><FontAwesomeIcon icon={faInstagramSquare} className={`${styles.aboutLink} ${styles.aboutLinkSite}`} /></a>
+        <address className='flex gap-3'>
+          <a href="mailto:davbyron@icloud.com"><FontAwesomeIcon icon={faSquareEnvelope} className="text-5xl" /></a>
+          <a href="https://github.com/davbyron"><FontAwesomeIcon icon={faGithubSquare} className="text-5xl" /></a>
+          <a href="https://www.linkedin.com/in/david-byron-62a56b77/"><FontAwesomeIcon icon={faLinkedin} className="text-5xl" /></a>
+          <a href="https://www.instagram.com/bavdyron/"><FontAwesomeIcon icon={faInstagramSquare} className="text-5xl" /></a>
         </address>
         <p>Copyright © 2023 David Byron</p>
       </footer>
