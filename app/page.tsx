@@ -18,6 +18,8 @@ import imagesJson from "../public/gallery/images.json"
 import styles from "./page.module.css";
 
 export default function HomePage() {
+  const year = new Date().getFullYear();
+
   const aboutSectionRef = useRef<HTMLDivElement>(null);
 
   function handleScroll() {
@@ -144,7 +146,7 @@ export default function HomePage() {
           <a href="https://www.linkedin.com/in/david-byron-62a56b77/"><FontAwesomeIcon icon={faLinkedin} className="text-5xl" /></a>
           <a href="https://www.instagram.com/bavdyron/"><FontAwesomeIcon icon={faInstagramSquare} className="text-5xl" /></a>
         </address>
-        <p>Copyright © 2023 David Byron</p>
+        <p>Copyright &copy; {year} David Byron</p>
       </footer>
     </>
   )
