@@ -5,6 +5,10 @@
   --color-dark-gray: #252627;
   --color-orange: #ea3501;
 
+  --text-shadow-glow: 0 0 3px rgb(234, 51, 1 / 0.5);
+
+  --font-archivo-black: "Archivo Black", sans-serif;
+  --font-dosis: "Dosis", sans-serif;
   --font-roboto: "Roboto", sans-serif;
 
   --animate-move-down: move-down 1s ease;
@@ -22,36 +26,7 @@
   }
 }
 
-a {
-  color: #ea3501;
-}
-
-h2 {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 3em;
-  color: black;
-  padding-top: 0.5em;
-  margin: 0.5em 0 0.3em 0;
-}
-
 h3 {
-  font-weight: 400;
-  font-family: 'Dosis', sans-serif;
-  font-size: 1.5em;
-  color: #ea3501;
+  /* Should work in tailwind but doesn't? */
   text-shadow: 0 0 3px rgba(234, 51, 1, 0.5);
-  text-transform: uppercase;
-}
-
-@media all and (max-width: 500px) {
-  body {
-    margin: 5vh 2.5vw;
-    font-size: 0.85em;
-  }
-}
-
-@media all and (max-width: 600px) {
-  figure {
-    margin: 0;
-  }
 }

@@ -32,9 +32,9 @@ export default function HomePage() {
   }
 
   return (
-    <>
+    <div className="flex flex-col gap-12">
       <div className="flex flex-col justify-between h-[90vh] text-base">
-        <header className="h-[75vh] flex">
+        <header className="h-[75vh] flex justify-center">
           <div className="relative w-[75vh] overflow-hidden">
             <div className="flex items-center absolute size-1/2 top-1/4 left-1/4">
               <div className="relative w-full aspect-square rounded-full overflow-hidden">
@@ -74,15 +74,15 @@ export default function HomePage() {
           </button>
         </div>
       </div>
-      <div className="w-3/4 mx-auto flex flex-col gap-10 text-justify">
-        <section className="flex flex-col gap-4" id="about" ref={aboutSectionRef}>
-          <h2>ABOUT</h2>
+      <div className="w-3/4 pt-18 mx-auto flex flex-col gap-20 text-justify" ref={aboutSectionRef}>
+        <section className="flex flex-col gap-5" id="about">
+          <h2 className="font-archivo-black text-5xl text-black">ABOUT</h2>
           <p>Nice to meet you on the web! I'm David, an Artist and Developer.</p>
 
-          <p>By day I am an Application Developer at <a href="https://www.rutgers.edu/">Rutgers University</a> where I support the Division of Continuing Studies
+          <p>By day I am an Application Developer at <a className="text-orange underline" href="https://www.rutgers.edu/">Rutgers University</a> where I support the Division of Continuing Studies
           by creating and maintaining bespoke web applications ranging from HR hiring systems to department sign-in systems and reporting.</p>
 
-          <p>Before Rutgers, I worked as a Software Engineer at <a href="https://www.lymba.com/">Lymba</a> where I primarily developed web apps integrated
+          <p>Before Rutgers, I worked as a Software Engineer at <a className="text-orange underline" href="https://www.lymba.com/">Lymba</a> where I primarily developed web apps integrated
           with NLP tools and knowledge graphs. My day-to-day really varied, but I was often responsible for UI/UX design, building
           and maintaining customer-facing applications, ontology building, creating NLP resources, maintaining RESTful Python APIs,
           client demos, documentation writing, and quality assurance testing.</p>
@@ -90,50 +90,50 @@ export default function HomePage() {
           <p>In a past life I was an avid linguist focusing primarily on syntactic phenomena in hopes of
           finding the answers to the following questions: (i) what are the fundamental syntactic
           operations provided by the human language faculty?; and (ii) what constraints are they
-          subject to, and why? This work culminated in my Master's thesis <cite><a href="./thesis.pdf">Extraction from Conjuncts
+          subject to, and why? This work culminated in my Master's thesis <cite><a className="text-orange underline" href="./thesis.pdf">Extraction from Conjuncts
           in Khoekhoe: An Argument for Cyclic Linearization</a></cite> advised by Erik Zyman
           at the University of Chicago.</p>
 
           <p>Outside of work, I spend a lot of time cycling, gardening, playing video games, making art of all kinds, and at drag events.</p>
         </section>
-        <section className="flex flex-col gap-6">
-          <div className="flex flex-col gap-3">
-            <h2>PROJECTS</h2>
-            <h3>Web Development</h3>
+        <section className="flex flex-col gap-5">
+          <h2 className="font-archivo-black text-5xl text-black">PROJECTS</h2>
+          <div className="flex flex-col gap-2.5">
+            <h3 className="text-orange uppercase font-dosis text-2xl">Web Development</h3>
             <p>
-              <span className="font-bold">studynorthernpomo.com</span> - Learn Northern Pomo! (<a href="https://www.studynorthernpomo.com/">link</a>)
+              <span className="font-bold">studynorthernpomo.com</span> - Learn Northern Pomo! (<a className="text-orange underline" href="https://www.studynorthernpomo.com/">link</a>)
             </p>
             <p>
-              <span className="font-bold">davidbyron.info</span> - Custom-built personal website for myself. (<a href="#">you are here</a>)
+              <span className="font-bold">davidbyron.info</span> - Custom-built personal website for myself. (<a className="text-orange underline" href="#">you are here</a>)
             </p>
             <p>
-              <span className="font-bold">andreschwab.com</span> - Custom-built personal website for Andre Schwab. (<a href="https://www.andreschwab.com/">link</a>)
+              <span className="font-bold">andreschwab.com</span> - Custom-built personal website for Andre Schwab. (<a className="text-orange underline" href="https://www.andreschwab.com/">link</a>)
             </p>
           </div>
-          <div className="flex flex-col gap-4">
-            <h3>Academics</h3>
+          <div className="flex flex-col gap-2.5">
+            <h3 className="text-orange uppercase font-dosis text-2xl">Academics</h3>
             <p>
               <b>Extraction from Conjuncts in Khoekhoe: An Argument for Cyclic Linearization</b> - In
               this thesis, I tackle a violation of the otherwise highly robust Coordinate Structure Constraint,
               so-called “SLF-coordination”, that has yet to be fully understood. I argue that the cyclic
               linearization approach to the locality of movement makes it possible to account for this
-              puzzling phenomenon as it manifests in the Khoisan language Khoekhoe. (<a href="./public/thesis.pdf">link</a>)
+              puzzling phenomenon as it manifests in the Khoisan language Khoekhoe. (<a className="text-orange underline" href="./public/thesis.pdf">link</a>)
             </p>
             <p>
               <b>Grammatical Sketch of |Xam</b> - A webpage outlining the syntactic properties of |Xam, a
-              now extinct Khoisan language. (<a href="https://sites.google.com/site/thekhoisanlanguages/tuu/xam">link</a>)
+              now extinct Khoisan language. (<a className="text-orange underline" href="https://sites.google.com/site/thekhoisanlanguages/tuu/xam">link</a>)
             </p>
           </div>
         </section>
-        <section>
-          <h2>GALLERY</h2>
+        <section className="flex flex-col gap-5">
+          <h2 className="font-archivo-black text-5xl text-black">GALLERY</h2>
           <div className="flex flex-col gap-12">
             <div className="flex flex-col gap-4">
-              <h3>Ceramics</h3>
+              <h3 className="text-orange uppercase font-dosis text-2xl">Ceramics</h3>
               <Slideshow images={imagesJson["ceramics"]} category="ceramics" />
             </div>
             <div className="flex flex-col gap-4">
-              <h3>Photography</h3>
+              <h3 className="text-orange uppercase font-dosis text-2xl">Photography</h3>
               <Slideshow images={imagesJson["photography"]} category="photography" />
             </div>
           </div>
@@ -141,13 +141,13 @@ export default function HomePage() {
       </div>
       <footer className="mx-auto mt-36 p-8 w-3/4 flex flex-col gap-4 items-center border-t">
         <address className="flex gap-3">
-          <a href="mailto:davbyron@icloud.com"><FontAwesomeIcon icon={faSquareEnvelope} className="text-5xl" /></a>
-          <a href="https://github.com/davbyron"><FontAwesomeIcon icon={faGithubSquare} className="text-5xl" /></a>
-          <a href="https://www.linkedin.com/in/david-byron-62a56b77/"><FontAwesomeIcon icon={faLinkedin} className="text-5xl" /></a>
-          <a href="https://www.instagram.com/bavdyron/"><FontAwesomeIcon icon={faInstagramSquare} className="text-5xl" /></a>
+          <a className="text-orange" href="mailto:davbyron@icloud.com"><FontAwesomeIcon icon={faSquareEnvelope} className="text-5xl" /></a>
+          <a className="text-orange" href="https://github.com/davbyron"><FontAwesomeIcon icon={faGithubSquare} className="text-5xl" /></a>
+          <a className="text-orange" href="https://www.linkedin.com/in/david-byron-62a56b77/"><FontAwesomeIcon icon={faLinkedin} className="text-5xl" /></a>
+          <a className="text-orange" href="https://www.instagram.com/bavdyron/"><FontAwesomeIcon icon={faInstagramSquare} className="text-5xl" /></a>
         </address>
         <p className="text-xs">Copyright &copy; {year} David Byron</p>
       </footer>
-    </>
+    </div>
   )
 }

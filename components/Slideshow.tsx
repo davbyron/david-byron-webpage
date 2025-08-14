@@ -56,7 +56,7 @@ function Slideshow(props: slideshowPropType) {
   return (
     <div
       id="slideshow"
-      className="flex items-center gap-5 text-base"
+      className="flex items-center gap-5 text-sm md:text-base"
     >
       <button
         id="prev"
