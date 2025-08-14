@@ -17,7 +17,7 @@ import imagesJson from "../public/gallery/images.json"
 
 import styles from "./page.module.css";
 
-function HomePage() {
+export default function HomePage() {
   const aboutSectionRef = useRef<HTMLDivElement>(null);
 
   function handleScroll() {
@@ -102,16 +102,16 @@ function HomePage() {
             <h2>PROJECTS</h2>
             <h3>Web Development</h3>
             <p>
-              <b>Unnamed Chess Battle Game (in development)</b> - Blog coming soon. For now, follow my progress on GitHub! (<a href="https://github.com/davbyron/chess-battle">repository</a>)
+              <span className="font-bold">Unnamed Chess Battle Game (in development)</span> - Blog coming soon. For now, follow my progress on GitHub! (<a href="https://github.com/davbyron/chess-battle">repository</a>)
             </p>
             <p>
-              <b>studynorthernpomo.com</b> - Learn Northern Pomo! (<a href="https://www.studynorthernpomo.com/">link</a>)
+              <span className="font-bold">studynorthernpomo.com</span> - Learn Northern Pomo! (<a href="https://www.studynorthernpomo.com/">link</a>)
             </p>
             <p>
-              <b>davidbyron.info</b> - Custom-built personal website for myself. (<a href="#">you are here</a>)
+              <span className="font-bold">davidbyron.info</span> - Custom-built personal website for myself. (<a href="#">you are here</a>)
             </p>
             <p>
-              <b>andreschwab.com</b> - Custom-built personal website for Andre Schwab. (<a href="https://www.andreschwab.com/">link</a>)
+              <span className="font-bold">andreschwab.com</span> - Custom-built personal website for Andre Schwab. (<a href="https://www.andreschwab.com/">link</a>)
             </p>
           </div>
           <div className="flex flex-col gap-4">
@@ -131,10 +131,16 @@ function HomePage() {
         </section>
         <section>
           <h2>GALLERY</h2>
-          <h3 className="mb-4">Ceramics</h3>
-          <Slideshow images={imagesJson["ceramics"]} category="ceramics" />
-          <h3 className="mb-4">Photography</h3>
-          <Slideshow images={imagesJson["photography"]} category="photography" />
+          <div className="flex flex-col gap-12">
+            <div className="flex flex-col gap-4">
+              <h3>Ceramics</h3>
+              <Slideshow images={imagesJson["ceramics"]} category="ceramics" />
+            </div>
+            <div className="flex flex-col gap-4">
+              <h3>Photography</h3>
+              <Slideshow images={imagesJson["photography"]} category="photography" />
+            </div>
+          </div>
         </section>
       </div>
       <footer>
@@ -149,5 +155,3 @@ function HomePage() {
     </>
   )
 }
-
-export default HomePage
