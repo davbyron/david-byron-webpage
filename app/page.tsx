@@ -121,7 +121,7 @@ export default function HomePage() {
             </p>
             <p>
               <b>Grammatical Sketch of |Xam</b> - A webpage outlining the syntactic properties of |Xam, a
-              now extinct Khoisan language. (<a className="text-orange underline" href="https://sites.google.com/site/thekhoisanlanguages/tuu/xam">link</a>)
+              now extinct Khoisan language.
             </p>
           </div>
         </section>
