@@ -73,7 +73,7 @@ function Slideshow(props: slideshowPropType) {
         />
       </button>
 
-      <figure className="flex flex-col gap-2">
+      <figure className="w-full flex flex-col gap-2">
         <div className="w-full aspect-3/2 overflow-hidden">
           <img
             src={`/gallery/${category}/${images[currentImageId].file}`}
