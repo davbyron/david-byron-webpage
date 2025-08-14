@@ -1,21 +1,21 @@
-'use client'
+"use client"
 
-import React, { useRef } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown, faSquareEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faGithubSquare, faLinkedin, faInstagramSquare } from '@fortawesome/free-brands-svg-icons'
+import React, { useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faChevronDown, faSquareEnvelope } from "@fortawesome/free-solid-svg-icons"
+import { faGithubSquare, faLinkedin, faInstagramSquare } from "@fortawesome/free-brands-svg-icons"
 
-import Image from 'next/image';
+import Image from "next/image";
 
-import Slideshow from '../components/Slideshow';
+import Slideshow from "../components/Slideshow";
 
-import myName from '../public/SVGs/my_name.svg' 
-import developer from '../public/SVGs/developer.svg'
-import visualArtist from '../public/SVGs/visual_artist.svg'
+import myName from "../public/SVGs/my_name.svg" 
+import developer from "../public/SVGs/developer.svg"
+import visualArtist from "../public/SVGs/visual_artist.svg"
 
-import imagesJson from '../public/gallery/images.json'
+import imagesJson from "../public/gallery/images.json"
 
-import styles from './page.module.css';
+import styles from "./page.module.css";
 
 function HomePage() {
   const aboutSectionRef = useRef<HTMLDivElement>(null);
@@ -23,8 +23,8 @@ function HomePage() {
   function handleScroll() {
     if (aboutSectionRef.current) {
       aboutSectionRef.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+        behavior: "smooth",
+        block: "start"
       });
     }
   }
@@ -72,7 +72,7 @@ function HomePage() {
           </button>
         </div>
       </div>
-      <div className="w-3/4 mx-auto text-justify">
+      <div className="w-3/4 mx-auto flex flex-col gap-10 text-justify">
         <section className="flex flex-col gap-4" id="about" ref={aboutSectionRef}>
           <h2>ABOUT</h2>
           <p>Nice to meet you on the web! I'm David, an Artist and Developer.</p>
@@ -98,7 +98,7 @@ function HomePage() {
           <p>Outside of work, I spend a lot of time cycling, gardening, playing video games, making art of all kinds, and at drag events.</p>
         </section>
         <section className="flex flex-col gap-6">
-          <div className='flex flex-col gap-3'>
+          <div className="flex flex-col gap-3">
             <h2>PROJECTS</h2>
             <h3>Web Development</h3>
             <p>
@@ -114,7 +114,7 @@ function HomePage() {
               <b>andreschwab.com</b> - Custom-built personal website for Andre Schwab. (<a href="https://www.andreschwab.com/">link</a>)
             </p>
           </div>
-          <div className='flex flex-col gap-4'>
+          <div className="flex flex-col gap-4">
             <h3>Academics</h3>
             <p>
               <b>Extraction from Conjuncts in Khoekhoe: An Argument for Cyclic Linearization</b> - In
@@ -132,13 +132,13 @@ function HomePage() {
         <section>
           <h2>GALLERY</h2>
           <h3 className="mb-4">Ceramics</h3>
-          <Slideshow images={imagesJson["ceramics"]} category='ceramics' />
+          <Slideshow images={imagesJson["ceramics"]} category="ceramics" />
           <h3 className="mb-4">Photography</h3>
-          <Slideshow images={imagesJson["photography"]} category='photography' />
+          <Slideshow images={imagesJson["photography"]} category="photography" />
         </section>
       </div>
       <footer>
-        <address className='flex gap-3'>
+        <address className="flex gap-3">
           <a href="mailto:davbyron@icloud.com"><FontAwesomeIcon icon={faSquareEnvelope} className="text-5xl" /></a>
           <a href="https://github.com/davbyron"><FontAwesomeIcon icon={faGithubSquare} className="text-5xl" /></a>
           <a href="https://www.linkedin.com/in/david-byron-62a56b77/"><FontAwesomeIcon icon={faLinkedin} className="text-5xl" /></a>
