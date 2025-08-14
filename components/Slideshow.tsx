@@ -56,7 +56,7 @@ function Slideshow(props: slideshowPropType) {
   return (
     <div
       id="slideshow"
-      className="flex items-center gap-5"
+      className="flex items-center gap-5 text-base"
     >
       <button
         id="prev"
@@ -74,11 +74,11 @@ function Slideshow(props: slideshowPropType) {
       </button>
 
       <figure className="flex flex-col gap-2">
-        <div className="aspect-3/2">
+        <div className="w-full aspect-3/2 overflow-hidden">
           <img
             src={`/gallery/${category}/${images[currentImageId].file}`}
             alt={images[currentImageId].title}
-            className="object-contain"
+            className="h-full w-full object-contain"
           />
         </div>
         <figcaption className="flex items-center justify-center">
