@@ -31,7 +31,7 @@ function HomePage() {
 
   return (
     <>
-      <div className={styles.onOpen}>
+      <div className="flex flex-col justify-between h-[90vh] text-base">
         <header>
           <div className="relative w-[75vh] overflow-hidden">
             <div className="flex items-center absolute size-1/2 top-1/4 left-1/4">
@@ -72,8 +72,8 @@ function HomePage() {
           </button>
         </div>
       </div>
-      <div className={styles.onScroll}>
-        <section className={styles.about} id="about" ref={aboutSectionRef}>
+      <div className="w-3/4 mx-auto text-justify">
+        <section className="flex flex-col gap-4" id="about" ref={aboutSectionRef}>
           <h2>ABOUT</h2>
           <p>Nice to meet you on the web! I'm David, an Artist and Developer.</p>
 
@@ -97,33 +97,37 @@ function HomePage() {
 
           <p>Outside of work, I spend a lot of time cycling, gardening, playing video games, making art of all kinds, and at drag events.</p>
         </section>
-        <section className={styles.projects}>
-          <h2>PROJECTS</h2>
-          <h3>Web Development</h3>
-          <p>
-            <b>Unnamed Chess Battle Game (in development)</b> - Blog coming soon. For now, follow my progress on GitHub! (<a href="https://github.com/davbyron/chess-battle">repository</a>)
-          </p>
-          <p>
-            <b>studynorthernpomo.com</b> - Learn Northern Pomo! (<a href="https://www.studynorthernpomo.com/">link</a>)
-          </p>
-          <p>
-            <b>davidbyron.info</b> - Custom-built personal website for myself. (<a href="#">you are here</a>)
-          </p>
-          <p>
-            <b>andreschwab.com</b> - Custom-built personal website for Andre Schwab. (<a href="https://www.andreschwab.com/">link</a>)
-          </p>
-          <h3>Academics</h3>
-          <p>
-            <b>Extraction from Conjuncts in Khoekhoe: An Argument for Cyclic Linearization</b> - In
-            this thesis, I tackle a violation of the otherwise highly robust Coordinate Structure Constraint,
-            so-called “SLF-coordination”, that has yet to be fully understood. I argue that the cyclic
-            linearization approach to the locality of movement makes it possible to account for this
-            puzzling phenomenon as it manifests in the Khoisan language Khoekhoe. (<a href="./public/thesis.pdf">link</a>)
-          </p>
-          <p>
-            <b>Grammatical Sketch of |Xam</b> - A webpage outlining the syntactic properties of |Xam, a
-            now extinct Khoisan language. (<a href="https://sites.google.com/site/thekhoisanlanguages/tuu/xam">link</a>)
-          </p>
+        <section className="flex flex-col gap-6">
+          <div className='flex flex-col gap-3'>
+            <h2>PROJECTS</h2>
+            <h3>Web Development</h3>
+            <p>
+              <b>Unnamed Chess Battle Game (in development)</b> - Blog coming soon. For now, follow my progress on GitHub! (<a href="https://github.com/davbyron/chess-battle">repository</a>)
+            </p>
+            <p>
+              <b>studynorthernpomo.com</b> - Learn Northern Pomo! (<a href="https://www.studynorthernpomo.com/">link</a>)
+            </p>
+            <p>
+              <b>davidbyron.info</b> - Custom-built personal website for myself. (<a href="#">you are here</a>)
+            </p>
+            <p>
+              <b>andreschwab.com</b> - Custom-built personal website for Andre Schwab. (<a href="https://www.andreschwab.com/">link</a>)
+            </p>
+          </div>
+          <div className='flex flex-col gap-4'>
+            <h3>Academics</h3>
+            <p>
+              <b>Extraction from Conjuncts in Khoekhoe: An Argument for Cyclic Linearization</b> - In
+              this thesis, I tackle a violation of the otherwise highly robust Coordinate Structure Constraint,
+              so-called “SLF-coordination”, that has yet to be fully understood. I argue that the cyclic
+              linearization approach to the locality of movement makes it possible to account for this
+              puzzling phenomenon as it manifests in the Khoisan language Khoekhoe. (<a href="./public/thesis.pdf">link</a>)
+            </p>
+            <p>
+              <b>Grammatical Sketch of |Xam</b> - A webpage outlining the syntactic properties of |Xam, a
+              now extinct Khoisan language. (<a href="https://sites.google.com/site/thekhoisanlanguages/tuu/xam">link</a>)
+            </p>
+          </div>
         </section>
         <section className={styles.gallery}>
           <h2>GALLERY</h2>
