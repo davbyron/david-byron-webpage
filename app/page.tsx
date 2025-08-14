@@ -139,14 +139,14 @@ export default function HomePage() {
           </div>
         </section>
       </div>
-      <footer>
+      <footer className="mx-auto mt-36 p-8 w-3/4 flex flex-col gap-4 items-center border-t">
         <address className="flex gap-3">
           <a href="mailto:davbyron@icloud.com"><FontAwesomeIcon icon={faSquareEnvelope} className="text-5xl" /></a>
           <a href="https://github.com/davbyron"><FontAwesomeIcon icon={faGithubSquare} className="text-5xl" /></a>
           <a href="https://www.linkedin.com/in/david-byron-62a56b77/"><FontAwesomeIcon icon={faLinkedin} className="text-5xl" /></a>
           <a href="https://www.instagram.com/bavdyron/"><FontAwesomeIcon icon={faInstagramSquare} className="text-5xl" /></a>
         </address>
-        <p>Copyright &copy; {year} David Byron</p>
+        <p className="text-xs">Copyright &copy; {year} David Byron</p>
       </footer>
     </>
   )
