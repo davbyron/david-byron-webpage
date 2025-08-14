@@ -74,7 +74,7 @@ export default function HomePage() {
           </button>
         </div>
       </div>
-      <div className="w-3/4 pt-18 mx-auto flex flex-col gap-20 text-justify" ref={aboutSectionRef}>
+      <div className="w-3/4 max-w-[80ch] pt-18 mx-auto flex flex-col gap-20 text-justify" ref={aboutSectionRef}>
         <section className="flex flex-col gap-5" id="about">
           <h2 className="font-archivo-black text-5xl text-black">ABOUT</h2>
           <p>Nice to meet you on the web! I'm David, an Artist and Developer.</p>
@@ -139,7 +139,7 @@ export default function HomePage() {
           </div>
         </section>
       </div>
-      <footer className="mx-auto mt-36 p-8 w-3/4 flex flex-col gap-4 items-center border-t">
+      <footer className="mx-auto mt-36 p-8 w-3/4 max-w-[80ch] flex flex-col gap-4 items-center border-t">
         <address className="flex gap-3">
           <a className="text-orange" href="mailto:davbyron@icloud.com"><FontAwesomeIcon icon={faSquareEnvelope} className="text-5xl" /></a>
           <a className="text-orange" href="https://github.com/davbyron"><FontAwesomeIcon icon={faGithubSquare} className="text-5xl" /></a>
