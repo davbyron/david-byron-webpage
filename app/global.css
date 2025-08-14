@@ -1,7 +1,14 @@
 @import "tailwindcss";
 
 @theme {
+  --color-tan: #f2efe9;
+  --color-dark-gray: #252627;
+  --color-orange: #ea3501;
+
+  --font-roboto: "Roboto", sans-serif;
+
   --animate-move-down: move-down 1s ease;
+
   @keyframes move-down {
     0% {
       transform: translateY(0px);
@@ -13,28 +20,6 @@
       transform: translateY(0px);
     }
   }
-}
-
-body {
-  margin: 5vh 10vw 0vh; /* top | left/right | bottom */
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.15em;
-  background-color: #f2efe9;
-  color: #252627;
-  overflow-x: hidden;
-}
-
-header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 75vh;
-}
-
-svg {
-  display: block;
-  position: relative;
-  z-index: 1;
 }
 
 a {

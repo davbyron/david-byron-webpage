@@ -34,7 +34,7 @@ export default function HomePage() {
   return (
     <>
       <div className="flex flex-col justify-between h-[90vh] text-base">
-        <header>
+        <header className="h-[75vh] flex">
           <div className="relative w-[75vh] overflow-hidden">
             <div className="flex items-center absolute size-1/2 top-1/4 left-1/4">
               <div className="relative w-full aspect-square rounded-full overflow-hidden">
