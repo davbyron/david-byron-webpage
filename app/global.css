@@ -1,85 +1,32 @@
-body {
-  margin: 5vh 10vw 0vh; /* top | left/right | bottom */
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.15em;
-  background-color: #f2efe9;
-  color: #252627;
-  overflow-x: hidden;
-}
+@import "tailwindcss";
 
-header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 75vh;
-}
+@theme {
+  --color-tan: #f2efe9;
+  --color-dark-gray: #252627;
+  --color-orange: #ea3501;
 
-svg {
-  display: block;
-  position: relative;
-  z-index: 1;
-}
+  --text-shadow-glow: 0 0 3px rgb(234, 51, 1 / 0.5);
 
-a {
-  color: #ea3501;
-}
+  --font-archivo-black: "Archivo Black", sans-serif;
+  --font-dosis: "Dosis", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
 
-section {
-  margin-top: 5vh;
-}
+  --animate-move-down: move-down 1s ease;
 
-h2 {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 3em;
-  color: black;
-  padding-top: 0.5em;
-  margin: 0.5em 0 0.3em 0;
+  @keyframes move-down {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
 }
 
 h3 {
-  margin: 0;
-  font-weight: 400;
-  font-family: 'Dosis', sans-serif;
-  font-size: 1.5em;
-  color: #ea3501;
+  /* Should work in tailwind but doesn't? */
   text-shadow: 0 0 3px rgba(234, 51, 1, 0.5);
-  text-transform: uppercase;
-}
-
-footer {
-  margin-top: 150px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  height: 150px;
-  width: 75%; /* Same as .onScroll */
-  padding: 10px;
-  border-top: 1px solid black;
-}
-
-footer address {
-  display: flex;
-  gap: 10px;
-}
-
- footer p {
-  margin: 0;
-  font-size: 12px;
- }
-
-@media all and (max-width: 500px) {
-  body {
-    margin: 5vh 2.5vw;
-    font-size: 0.85em;
-  }
-}
-
-@media all and (max-width: 600px) {
-  figure {
-    margin: 0;
-  }
 }

@@ -21,10 +21,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Dosis&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Dosis:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
       </head>
-      <body>{children}</body>
+      <body className="mt-[5vh] mx-[5vw] sm:mx-[10vw] bg-tan text-dark-gray font-roboto">{children}</body>
     </html>
   );
 }

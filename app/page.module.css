@@ -1,36 +1,3 @@
-.onOpen {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 90vh;
-}
-
-.revolvingText {
-  position: relative;
-  width: 75vh;
-  overflow: hidden;
-}
-
-.face {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  top: calc(25% - 1px);
-  left: calc(25% - 1px);
-  height: 50%;
-  width: 50%;
-}
-
-.faceContainer {
-  width: 100%;
-  padding-bottom: 100%;
-  background-image: url('../public/myface.jpeg');
-  background-repeat: no-repeat;
-  background-size: 175%;
-  background-position: 51.5% 52.5%;
-  border-radius: 100%;
-}
-
 .myName {
   position: absolute;
   height: 100%;
@@ -123,60 +90,6 @@
   animation-timing-function: linear;
 }
 
-.scrollButtonContainer {
-  position: relative;
-  margin: 0 auto;
-  z-index: 2;
-}
-
-.scrollButton {
-  display: block;
-  padding: 10px;
-  border-radius: 100%;
-  color: black;
-  transition: background-color 0.5s ease;
-  cursor: pointer;
-}
-
-.scrollButton:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.scrollButton:active {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.scrollButton:hover svg {
-  animation: 1s ease 1 moveDown;
-}
-
-.scrollButton span {
-  font-size: 3.5em;
-}
-
-.separator {
-  height: 5vh;
-}
-
-.onScroll {
-  width: 75%;
-  margin: 0 auto;
-  text-align: justify;
-}
-
-.aboutLinkSite {
-  padding-left: 0.05em;
-}
-
-.gallerySubheader {
-  margin-bottom: 20px;
-}
-
-.aboutLink {
-  font-size: 3em;
-  cursor: pointer;
-}
-
 
 /* DYNAMIC LAYOUT */
 
@@ -254,16 +167,4 @@
 @keyframes reverse-rotate-viz {
     0%{ transform: rotate(360deg); }
     100% { transform: rotate(0); }
-}
-
-@keyframes moveDown {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
 }
