@@ -63,7 +63,7 @@ export default function HomePage() {
             <Image src={visualArtist} className={styles.visualArtist} alt="Visual artist" />
           </div>
         </header>
-        <div className="relative mx-auto mb-12 sm:mb-0">
+        <div className="relative mx-auto mb-20 sm:mb-0">
           <button
             type="button"
             id="scroll-button"
