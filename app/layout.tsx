@@ -24,7 +24,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Dosis:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
       </head>
-      <body className="mt-[5vh] mx-[5vw] sm:mx-[10vw] bg-tan text-dark-gray font-roboto">{children}</body>
+      <body className="bg-tan text-dark-gray font-roboto">{children}</body>
     </html>
   );
 }

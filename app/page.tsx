@@ -33,7 +33,7 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col gap-12">
-      <div className="flex flex-col justify-between h-[90vh] text-base">
+      <div className="h-[90vh] mt-10 mx-5 sm:mx-8 flex flex-col justify-between text-base">
         <header className="h-[75vh] flex justify-center">
           <div className="relative w-[75vh] overflow-hidden">
             <div className="flex items-center absolute size-1/2 top-1/4 left-1/4">
@@ -63,7 +63,7 @@ export default function HomePage() {
             <Image src={visualArtist} className={styles.visualArtist} alt="Visual artist" />
           </div>
         </header>
-        <div className="relative mx-auto z-10">
+        <div className="relative mx-auto mb-24 sm:mb-0">
           <button
             type="button"
             id="scroll-button"
@@ -97,31 +97,36 @@ export default function HomePage() {
           <p>Outside of work, I spend a lot of time cycling, gardening, playing video games, making art of all kinds, and at drag events.</p>
         </section>
         <section className="flex flex-col gap-5">
-          <h2 className="font-archivo-black text-5xl text-black">PROJECTS</h2>
+          <h2 className="font-archivo-black text-5xl text-black">PRO<wbr />JECTS</h2>
           <div className="flex flex-col gap-2.5">
             <h3 className="text-orange uppercase font-dosis text-2xl">Web Development</h3>
-            <p>
-              <span className="font-bold">studynorthernpomo.com</span> - Learn Northern Pomo! (<a className="text-orange underline" href="https://www.studynorthernpomo.com/">link</a>)
+            <p className="flex flex-col gap-1 sm:block">
+              <span className="font-bold">studynorthernpomo.com</span>
+              <span className="hidden sm:inline-block">&nbsp;-&nbsp;</span>
+              <span>Learn Northern Pomo! (<a className="text-orange underline" href="https://www.studynorthernpomo.com/">link</a>)</span>
             </p>
-            <p>
-              <span className="font-bold">davidbyron.info</span> - Custom-built personal website for myself. (<a className="text-orange underline" href="#">you are here</a>)
+            <p className="flex flex-col gap-1 sm:block">
+              <span className="font-bold">davidbyron.info</span>
+              <span className="hidden sm:inline-block">&nbsp;-&nbsp;</span>
+              <span>Custom-built personal website for myself. (<a className="text-orange underline" href="#">you are here</a>)</span>
             </p>
-            <p>
-              <span className="font-bold">andreschwab.com</span> - Custom-built personal website for Andre Schwab. (<a className="text-orange underline" href="https://www.andreschwab.com/">link</a>)
+            <p className="flex flex-col gap-1 sm:block">
+              <span className="font-bold">andreschwab.com</span>
+              <span className="hidden sm:inline-block">&nbsp;-&nbsp;</span>
+              <span>Custom-built personal website for Andre Schwab. (<a className="text-orange underline" href="https://www.andreschwab.com/">link</a>)</span>
             </p>
           </div>
           <div className="flex flex-col gap-2.5">
             <h3 className="text-orange uppercase font-dosis text-2xl">Academics</h3>
-            <p>
-              <b>Extraction from Conjuncts in Khoekhoe: An Argument for Cyclic Linearization</b> - In
-              this thesis, I tackle a violation of the otherwise highly robust Coordinate Structure Constraint,
-              so-called “SLF-coordination”, that has yet to be fully understood. I argue that the cyclic
-              linearization approach to the locality of movement makes it possible to account for this
-              puzzling phenomenon as it manifests in the Khoisan language Khoekhoe. (<a className="text-orange underline" href="./public/thesis.pdf">link</a>)
-            </p>
-            <p>
-              <b>Grammatical Sketch of |Xam</b> - A webpage outlining the syntactic properties of |Xam, a
-              now extinct Khoisan language.
+            <p className="flex flex-col gap-1 sm:block">
+              <span className="font-bold">Extraction from Conjuncts in Khoekhoe: An Argument for Cyclic Linearization</span>
+              <span className="hidden sm:inline-block">&nbsp;-&nbsp;</span>
+              <span>
+                In this thesis, I tackle a violation of the otherwise highly robust Coordinate Structure Constraint,
+                so-called “SLF-coordination”, that has yet to be fully understood. I argue that the cyclic
+                linearization approach to the locality of movement makes it possible to account for this
+                puzzling phenomenon as it manifests in the Khoisan language Khoekhoe. (<a className="text-orange underline" href="/thesis.pdf">link</a>)
+              </span>
             </p>
           </div>
         </section>
