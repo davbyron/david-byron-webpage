@@ -100,28 +100,33 @@ export default function HomePage() {
           <h2 className="font-archivo-black text-5xl text-black">PRO<wbr />JECTS</h2>
           <div className="flex flex-col gap-2.5">
             <h3 className="text-orange uppercase font-dosis text-2xl">Web Development</h3>
-            <p>
-              <span className="font-bold">studynorthernpomo.com</span> - Learn Northern Pomo! (<a className="text-orange underline" href="https://www.studynorthernpomo.com/">link</a>)
+            <p className="flex flex-col gap-1 sm:block">
+              <span className="font-bold">studynorthernpomo.com</span>
+              <span className="hidden sm:inline-block">&nbsp;-&nbsp;</span>
+              <span>Learn Northern Pomo! (<a className="text-orange underline" href="https://www.studynorthernpomo.com/">link</a>)</span>
             </p>
-            <p>
-              <span className="font-bold">davidbyron.info</span> - Custom-built personal website for myself. (<a className="text-orange underline" href="#">you are here</a>)
+            <p className="flex flex-col gap-1 sm:block">
+              <span className="font-bold">davidbyron.info</span>
+              <span className="hidden sm:inline-block">&nbsp;-&nbsp;</span>
+              <span>Custom-built personal website for myself. (<a className="text-orange underline" href="#">you are here</a>)</span>
             </p>
-            <p>
-              <span className="font-bold">andreschwab.com</span> - Custom-built personal website for Andre Schwab. (<a className="text-orange underline" href="https://www.andreschwab.com/">link</a>)
+            <p className="flex flex-col gap-1 sm:block">
+              <span className="font-bold">andreschwab.com</span>
+              <span className="hidden sm:inline-block">&nbsp;-&nbsp;</span>
+              <span>Custom-built personal website for Andre Schwab. (<a className="text-orange underline" href="https://www.andreschwab.com/">link</a>)</span>
             </p>
           </div>
           <div className="flex flex-col gap-2.5">
             <h3 className="text-orange uppercase font-dosis text-2xl">Academics</h3>
-            <p>
-              <b>Extraction from Conjuncts in Khoekhoe: An Argument for Cyclic Linearization</b> - In
-              this thesis, I tackle a violation of the otherwise highly robust Coordinate Structure Constraint,
-              so-called “SLF-coordination”, that has yet to be fully understood. I argue that the cyclic
-              linearization approach to the locality of movement makes it possible to account for this
-              puzzling phenomenon as it manifests in the Khoisan language Khoekhoe. (<a className="text-orange underline" href="./public/thesis.pdf">link</a>)
-            </p>
-            <p>
-              <b>Grammatical Sketch of |Xam</b> - A webpage outlining the syntactic properties of |Xam, a
-              now extinct Khoisan language.
+            <p className="flex flex-col gap-1 sm:block">
+              <span className="font-bold">Extraction from Conjuncts in Khoekhoe: An Argument for Cyclic Linearization</span>
+              <span className="hidden sm:inline-block">&nbsp;-&nbsp;</span>
+              <span>
+                In this thesis, I tackle a violation of the otherwise highly robust Coordinate Structure Constraint,
+                so-called “SLF-coordination”, that has yet to be fully understood. I argue that the cyclic
+                linearization approach to the locality of movement makes it possible to account for this
+                puzzling phenomenon as it manifests in the Khoisan language Khoekhoe. (<a className="text-orange underline" href="./public/thesis.pdf">link</a>)
+              </span>
             </p>
           </div>
         </section>
