@@ -125,7 +125,7 @@ export default function HomePage() {
                 In this thesis, I tackle a violation of the otherwise highly robust Coordinate Structure Constraint,
                 so-called “SLF-coordination”, that has yet to be fully understood. I argue that the cyclic
                 linearization approach to the locality of movement makes it possible to account for this
-                puzzling phenomenon as it manifests in the Khoisan language Khoekhoe. (<a className="text-orange underline" href="./public/thesis.pdf">link</a>)
+                puzzling phenomenon as it manifests in the Khoisan language Khoekhoe. (<a className="text-orange underline" href="/thesis.pdf">link</a>)
               </span>
             </p>
           </div>
