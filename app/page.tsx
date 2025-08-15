@@ -33,7 +33,7 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col gap-12">
-      <div className="h-dvh mx-5 sm:mx-8 flex flex-col justify-around text-base">
+      <div className="h-[90vh] mt-10 mx-5 sm:mx-8 flex flex-col justify-between text-base">
         <header className="h-[75vh] flex justify-center">
           <div className="relative w-[75vh] overflow-hidden">
             <div className="flex items-center absolute size-1/2 top-1/4 left-1/4">
@@ -63,7 +63,7 @@ export default function HomePage() {
             <Image src={visualArtist} className={styles.visualArtist} alt="Visual artist" />
           </div>
         </header>
-        <div className="relative mx-auto mb-24 sm:mb-0">
+        <div className="relative mx-auto mb-12 sm:mb-0">
           <button
             type="button"
             id="scroll-button"
