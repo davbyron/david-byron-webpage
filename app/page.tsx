@@ -33,7 +33,7 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col gap-12">
-      <div className="flex flex-col justify-between h-[90vh] text-base">
+      <div className="flex flex-col justify-around h-dvh text-base">
         <header className="h-[75vh] flex justify-center">
           <div className="relative w-[75vh] overflow-hidden">
             <div className="flex items-center absolute size-1/2 top-1/4 left-1/4">
@@ -63,7 +63,7 @@ export default function HomePage() {
             <Image src={visualArtist} className={styles.visualArtist} alt="Visual artist" />
           </div>
         </header>
-        <div className="relative mx-auto z-10">
+        <div className="relative mx-auto mb-24 sm:mb-0">
           <button
             type="button"
             id="scroll-button"
@@ -97,7 +97,7 @@ export default function HomePage() {
           <p>Outside of work, I spend a lot of time cycling, gardening, playing video games, making art of all kinds, and at drag events.</p>
         </section>
         <section className="flex flex-col gap-5">
-          <h2 className="font-archivo-black text-5xl text-black">PROJECTS</h2>
+          <h2 className="font-archivo-black text-5xl text-black">PRO<wbr />JECTS</h2>
           <div className="flex flex-col gap-2.5">
             <h3 className="text-orange uppercase font-dosis text-2xl">Web Development</h3>
             <p>
