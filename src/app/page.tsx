@@ -9,7 +9,7 @@ import { faGithubSquare, faLinkedin, faInstagramSquare } from "@fortawesome/free
 
 import { Slideshow } from "@/components";
 
-import imagesJson from "../public/gallery/images.json"
+import imagesJson from "../../public/gallery/images.json"
 
 import styles from "./page.module.css";
 
