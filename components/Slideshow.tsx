@@ -13,7 +13,7 @@ type slideshowPropType = {
   images: imageType[]
 }
 
-function Slideshow(props: slideshowPropType) {
+export function Slideshow(props: slideshowPropType) {
   const { category, images } = props;
 
   const [currentImageId, setCurrentImageId] = useState(0);
@@ -103,5 +103,3 @@ function Slideshow(props: slideshowPropType) {
     </div>
   )
 }
-
-export default Slideshow

@@ -1,17 +1,13 @@
 "use client"
 
 import React, { useRef } from "react";
+import Image from "next/image";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronDown, faSquareEnvelope } from "@fortawesome/free-solid-svg-icons"
 import { faGithubSquare, faLinkedin, faInstagramSquare } from "@fortawesome/free-brands-svg-icons"
 
-import Image from "next/image";
-
-import Slideshow from "../components/Slideshow";
-
-import myName from "../public/SVGs/my_name.svg" 
-import developer from "../public/SVGs/developer.svg"
-import visualArtist from "../public/SVGs/visual_artist.svg"
+import { Slideshow } from "@/components";
 
 import imagesJson from "../public/gallery/images.json"
 
@@ -53,14 +49,16 @@ export default function HomePage() {
               return (
                 <Image
                   key={className}
-                  src={myName}
+                  src="SVGs/my_name.svg"
+                  height={1}
+                  width={1}
                   className={`${styles.myName} ${styles[className]}`}
                   alt="David Byron"
                 />
               )
             })}
-            <Image src={developer} className={styles.developer} alt="Developer" />
-            <Image src={visualArtist} className={styles.visualArtist} alt="Visual artist" />
+            <Image src="SVGs/developer.svg" height={1} width={1} className={styles.developer} alt="Developer" />
+            <Image src="SVGs/visual_artist.svg" height={1} width={1} className={styles.visualArtist} alt="Visual artist" />
           </div>
         </header>
         <div className="relative mx-auto mb-24 sm:mb-0">
