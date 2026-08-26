@@ -34,3 +34,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Track .agents/ for shared skills and rules, but ignore runtime state
+.agents/logs/
+.agents/memory/
+.agents/*.local.*
+
+#supabase
+supabase/.temp/
