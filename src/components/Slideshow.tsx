@@ -1,58 +1,39 @@
 "use client";
 
-import React, { useState, useEffect, SyntheticEvent } from "react"
+import { Database, SlideshowProps } from "@/types";
+import { useState, useEffect  } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons"
 
-type imageType = {
-  title: string
-  date: number
-  file: string
-}
+export function Slideshow(props: SlideshowProps) {
+  const { images, imageUrlBase } = props;
 
-type slideshowPropType = {
-  category: string
-  images: imageType[]
-}
-
-export function Slideshow(props: slideshowPropType) {
-  const { category, images } = props;
-
-  const [currentImageId, setCurrentImageId] = useState(0);
+  const [currentImage, setCurrentImage] = useState<Database["public"]["Tables"]["Gallery"]["Row"] | null>(null);
 
   useEffect(() => {
-    // Set random image as current image
-    setCurrentImageId(Math.floor(Math.random() * images.length))
-  }, [])
+    if (images && images.length > 0 && !currentImage) {
+      const randomIndex = Math.floor(Math.random() * images.length);
+      setCurrentImage(images[randomIndex]);
+    }
+  }, [images]);
 
-  /**
-   * 
-   * @param event Move slide backward or forward
-   */
-  const changeSlides = (event: SyntheticEvent) => {
-    const direction = event.currentTarget.id
-    const numImages = images.length - 1
+  function changeSlides(_: React.MouseEvent<HTMLButtonElement>, direction: "next" | "prev") {
+    setCurrentImage((prevImage) => {
+      if (!images || images.length === 0) {
+        return null;
+      }
 
-    // Set timeout to same time as svg transition in CSS.
-    // Otherwise, component re-renders, causing an interruption
-    // in the transition.
-    setTimeout(() => {
+      const currentIndex = prevImage ? images.findIndex((image) => image.id === prevImage.id) : -1;
+      let newIndex: number;
+
       if (direction === "next") {
-        if (currentImageId === numImages) {
-          setCurrentImageId(0)
-        } else {
-          setCurrentImageId(currentImageId + 1)
-        }
+        newIndex = (currentIndex + 1) % images.length;
+      } else {
+        newIndex = (currentIndex - 1 + images.length) % images.length;
       }
-  
-      if (direction === "prev") {
-        if (currentImageId === 0) {
-          setCurrentImageId(numImages)
-        } else {
-          setCurrentImageId(currentImageId - 1)
-        }
-      }
-    }, 100)
+
+      return images[newIndex];
+    });
   }
 
   return (
@@ -62,7 +43,7 @@ export function Slideshow(props: slideshowPropType) {
     >
       <button
         id="prev"
-        onClick={changeSlides}
+        onClick={(e) => changeSlides(e, "prev")}
         className="group flex items-center justify-center p-4 size-10 rounded-full
                   cursor-pointer transition-colors duration-500 ease-in-out
                   hover:bg-black/5 active:bg-black/10"
@@ -78,19 +59,19 @@ export function Slideshow(props: slideshowPropType) {
       <figure className="w-full flex flex-col gap-2">
         <div className="w-full aspect-3/2 overflow-hidden">
           <img
-            src={`/gallery/${category}/${images[currentImageId].file}`}
-            alt={images[currentImageId].title}
+            src={`${imageUrlBase}${currentImage?.filename}`}
+            alt={currentImage?.title}
             className="h-full w-full object-contain"
           />
         </div>
         <figcaption className="flex items-center justify-center">
-          {images[currentImageId].title}, {images[currentImageId].date}
+          {currentImage?.title}, {currentImage?.year}
         </figcaption>
       </figure>
 
       <button
         id="next"
-        onClick={changeSlides}
+        onClick={(e) => changeSlides(e, "next")}
         className="group flex items-center justify-center p-4 size-10 rounded-full
                   cursor-pointer transition-colors duration-500 ease-in-out
                   hover:bg-black/5 active:bg-black/10"
