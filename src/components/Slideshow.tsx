@@ -3,12 +3,13 @@
 import { Database, SlideshowProps } from "@/types";
 import { useState, useEffect  } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons"
+import { faChevronRight, faChevronLeft, faCircleNotch } from "@fortawesome/free-solid-svg-icons"
 
 export function Slideshow(props: SlideshowProps) {
   const { images, imageUrlBase } = props;
 
   const [currentImage, setCurrentImage] = useState<Database["public"]["Tables"]["Gallery"]["Row"] | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (images && images.length > 0 && !currentImage) {
@@ -18,6 +19,7 @@ export function Slideshow(props: SlideshowProps) {
   }, [images]);
 
   function changeSlides(_: React.MouseEvent<HTMLButtonElement>, direction: "next" | "prev") {
+    setIsLoading(true);
     setCurrentImage((prevImage) => {
       if (!images || images.length === 0) {
         return null;
@@ -58,11 +60,22 @@ export function Slideshow(props: SlideshowProps) {
 
       <figure className="w-full flex flex-col gap-2">
         <div className="w-full aspect-3/2 overflow-hidden">
-          <img
-            src={`${imageUrlBase}${currentImage?.filename}`}
-            alt={currentImage?.title}
-            className="h-full w-full object-contain"
-          />
+          {isLoading && (
+            <div className="h-full flex items-center justify-center">
+              <FontAwesomeIcon icon={faCircleNotch} className="relative top-3.5 animate-spin text-3xl" />
+            </div>
+          )}
+          {currentImage && (
+            <img
+              key={currentImage.id} // Forces clean remount per slide
+              src={`${imageUrlBase}${currentImage.filename}`}
+              alt={currentImage.title}
+              onLoad={() => setIsLoading(false)}
+              className={`h-full w-full object-contain transition-opacity duration-300 ${
+                isLoading ? "opacity-0" : "opacity-100"
+              }`}
+            />
+          )}
         </div>
         <figcaption className="flex items-center justify-center">
           {currentImage?.title}, {currentImage?.year}
