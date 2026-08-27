@@ -1,7 +1,7 @@
-import { Database } from "@/types";
+import type { Database } from "@/types";
 import { cookies } from "next/headers";
 import { createClient } from "@/utils/supabase/server";
-import { Slideshow } from "@/components";
+import { Slideshow } from "@/components/Slideshow"; // avoiding circular dependency by importing directly from the file instead of index.ts
 
 export async function Gallery() {
   const cookieStore = await cookies();

@@ -1,9 +1,10 @@
 "use client";
 
-import { Database, SlideshowProps } from "@/types";
+import type { Database, SlideshowProps } from "@/types";
 import { useState, useEffect  } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronRight, faChevronLeft, faCircleNotch } from "@fortawesome/free-solid-svg-icons"
+import { PopupImage } from "@/components/PopupImage"; // avoiding circular dependency by importing directly from the file instead of index.ts
 
 export function Slideshow(props: SlideshowProps) {
   const { images, imageUrlBase } = props;
@@ -59,22 +60,25 @@ export function Slideshow(props: SlideshowProps) {
       </button>
 
       <figure className="w-full flex flex-col gap-2">
-        <div className="w-full aspect-3/2 overflow-hidden">
+        <div className="group relative w-full aspect-3/2 overflow-hidden">
           {isLoading && (
             <div className="h-full flex items-center justify-center">
               <FontAwesomeIcon icon={faCircleNotch} className="relative top-3.5 animate-spin text-3xl" />
             </div>
           )}
           {currentImage && (
-            <img
-              key={currentImage.id} // Forces clean remount per slide
-              src={`${imageUrlBase}${currentImage.filename}`}
-              alt={currentImage.title}
-              onLoad={() => setIsLoading(false)}
-              className={`h-full w-full object-contain transition-opacity duration-300 ${
-                isLoading ? "opacity-0" : "opacity-100"
-              }`}
-            />
+            <>
+              <PopupImage image={currentImage} imageUrlBase={imageUrlBase} />
+              <img
+                key={currentImage.id}
+                src={`${imageUrlBase}${currentImage.filename}`}
+                alt={currentImage.title}
+                onLoad={() => setIsLoading(false)}
+                className={`h-full w-full object-contain transition-opacity duration-300 ${
+                  isLoading ? "opacity-0" : "opacity-100"
+                }`}
+              />
+            </>
           )}
         </div>
         <figcaption className="flex items-center justify-center">
