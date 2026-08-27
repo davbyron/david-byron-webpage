@@ -44,6 +44,7 @@ export function PopupImage(props: PopupImageProps) {
     <>
       <button
         type="button"
+        aria-label="Open image in popup"
         ref={refs.setReference}
         {...getReferenceProps()}
         className="absolute top-5 right-5 flex items-center justify-center p-4 size-10 rounded-full
@@ -72,6 +73,7 @@ export function PopupImage(props: PopupImageProps) {
               <div className="relative h-full w-fit">
                 <button
                   type="button"
+                  aria-label="Close popup"
                   onClick={() => setIsOpen(false)}
                   className="absolute top-5 right-5 group flex items-center justify-center p-4 size-10 rounded-full
                             cursor-pointer bg-black/50 text-white backdrop-blur-sm

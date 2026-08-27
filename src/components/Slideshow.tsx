@@ -46,6 +46,7 @@ export function Slideshow(props: SlideshowProps) {
     >
       <button
         id="prev"
+        aria-label="Previous image"
         onClick={(e) => changeSlides(e, "prev")}
         className="group flex items-center justify-center p-4 size-10 rounded-full
                   cursor-pointer transition-colors duration-500 ease-in-out
@@ -88,6 +89,7 @@ export function Slideshow(props: SlideshowProps) {
 
       <button
         id="next"
+        aria-label="Next image"
         onClick={(e) => changeSlides(e, "next")}
         className="group flex items-center justify-center p-4 size-10 rounded-full
                   cursor-pointer transition-colors duration-500 ease-in-out

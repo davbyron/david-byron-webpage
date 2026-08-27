@@ -15,6 +15,7 @@ export function ScrollButton() {
     <button
       type="button"
       id="scroll-button"
+      aria-label="Scroll to main content"
       onClick={scrollToMainContent}
       className="size-14 group p-2 rounded-full transition-colors duration-500 ease cursor-pointer hover:bg-black/5 active:bg-black/10"
     >

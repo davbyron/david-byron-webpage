@@ -60,16 +60,16 @@ export default function HomePage() {
 
         <footer className="mt-36 p-8 flex flex-col gap-4 items-center border-t">
           <address className="flex gap-3">
-            <Link className="text-orange" href="mailto:davbyron@icloud.com">
+            <Link className="text-orange" href="mailto:davbyron@icloud.com" aria-label="Email David Byron">
               <FontAwesomeIcon icon={faSquareEnvelope} className="text-5xl" />
             </Link>
-            <Link className="text-orange" href="https://github.com/davbyron">
+            <Link className="text-orange" href="https://github.com/davbyron" aria-label="Link to David Byron's GitHub profile">
               <FontAwesomeIcon icon={faGithubSquare} className="text-5xl" />
             </Link>
-            <Link className="text-orange" href="https://www.linkedin.com/in/david-byron-62a56b77/">
+            <Link className="text-orange" href="https://www.linkedin.com/in/david-byron-62a56b77/" aria-label="Link to David Byron's LinkedIn profile">
               <FontAwesomeIcon icon={faLinkedin} className="text-5xl" />
             </Link>
-            <Link className="text-orange" href="https://www.instagram.com/bavdyron/">
+            <Link className="text-orange" href="https://www.instagram.com/bavdyron/" aria-label="Link to David Byron's Instagram profile">
               <FontAwesomeIcon icon={faInstagramSquare} className="text-5xl" />
             </Link>
           </address>
