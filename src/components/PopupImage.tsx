@@ -48,10 +48,11 @@ export function PopupImage(props: PopupImageProps) {
         {...getReferenceProps()}
         className="absolute top-5 right-5 flex items-center justify-center p-4 size-10 rounded-full
                   cursor-pointer opacity-0 pointer-events-none
-                  transition-opacity duration-300
+                  transition-all duration-300
                   group-hover:opacity-100 group-hover:pointer-events-auto
                   focus-visible:opacity-100 focus-visible:pointer-events-auto
-                  bg-black/5 hover:bg-black/10 active:bg-black/25"
+                  bg-black/50 text-white backdrop-blur-sm
+                  hover:bg-black/70 active:bg-black/80"
       >
         <FontAwesomeIcon icon={faUpRightAndDownLeftFromCenter} size="sm" />
       </button>
@@ -73,8 +74,8 @@ export function PopupImage(props: PopupImageProps) {
                   type="button"
                   onClick={() => setIsOpen(false)}
                   className="absolute top-5 right-5 group flex items-center justify-center p-4 size-10 rounded-full
-                            cursor-pointer transition-colors duration-500 ease-in-out
-                            bg-black/5 hover:bg-black/10 active:bg-black/25"
+                            cursor-pointer bg-black/50 text-white backdrop-blur-sm
+                            hover:bg-black/70 active:bg-black/80"
                 >
                   <FontAwesomeIcon icon={faClose} size="sm" />
                 </button>
